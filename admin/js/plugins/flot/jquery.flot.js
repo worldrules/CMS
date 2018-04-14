@@ -493,7 +493,7 @@
                 i, j, k, m, length,
                 s, points, ps, x, y, axis, val, f, p;
 
-            function updataAxis(axis, min, max) {
+            function updateAxis(axis, min, max) {
                 if (min < axis.datamin && min != -fakeInfinity)
                     axis.datamin = min;
                 if (max > axis.datamax && max != fakeInfinity)
@@ -588,9 +588,9 @@
                                 f = format[m];
                                 // extract min/max info
                                 if (f.x)
-                                    updataAxis(s.xaxis, val, val);
+                                    updateAxis(s.xaxis, val, val);
                                 if (f.y)
-                                    updataAxis(s.yaxis, val, val);
+                                    updateAxis(s.yaxis, val, val);
                             }
                             points[k + m] = null;
                         }
@@ -671,8 +671,8 @@
                     }
                 }
                 
-                updataAxis(s.xaxis, xmin, xmax);
-                updataAxis(s.yaxis, ymin, ymax);
+                updateAxis(s.xaxis, xmin, xmax);
+                updateAxis(s.yaxis, ymin, ymax);
             }
 
             $.each(allAxes(), function (_, axis) {
@@ -1177,7 +1177,7 @@
                 generator = function(axis) {
                     var ticks = [],
                         tickSize = axis.tickSize[0], unit = axis.tickSize[1],
-                        d = new data(axis.min);
+                        d = new Date(axis.min);
                     
                     var step = tickSize * timeUnitSize[unit];
 
@@ -1201,7 +1201,7 @@
                     if (step >= timeUnitSize.day)
                         d.setUTCHours(0);
                     if (step >= timeUnitSize.day * 4)
-                        d.setUTCdata(1);
+                        d.setUTCDate(1);
                     if (step >= timeUnitSize.year)
                         d.setUTCMonth(0);
 
@@ -1216,7 +1216,7 @@
                                 // a bit complicated - we'll divide the month
                                 // up but we need to take care of fractions
                                 // so we don't end up in the middle of a day
-                                d.setUTCdata(1);
+                                d.setUTCDate(1);
                                 var start = d.getTime();
                                 d.setUTCMonth(d.getUTCMonth() + 1);
                                 var end = d.getTime();
@@ -1238,11 +1238,11 @@
                 };
 
                 formatter = function (v, axis) {
-                    var d = new data(v);
+                    var d = new Date(v);
 
                     // first check global format
                     if (opts.timeformat != null)
-                        return $.plot.formatdata(d, opts.timeformat, opts.monthNames);
+                        return $.plot.formatDate(d, opts.timeformat, opts.monthNames);
                     
                     var t = axis.tickSize[0] * timeUnitSize[axis.tickSize[1]];
                     var span = axis.max - axis.min;
@@ -1267,7 +1267,7 @@
                     else
                         fmt = "%y";
                     
-                    return $.plot.formatdata(d, fmt, opts.monthNames);
+                    return $.plot.formatDate(d, fmt, opts.monthNames);
                 };
             }
             else {
@@ -2525,9 +2525,9 @@
     }
 
     $.plot = function(placeholder, data, options) {
-        //var t0 = new data();
+        //var t0 = new Date();
         var plot = new Plot($(placeholder), data, options, $.plot.plugins);
-        //(window.console ? console.log : alert)("time used (msecs): " + ((new data()).getTime() - t0.getTime()));
+        //(window.console ? console.log : alert)("time used (msecs): " + ((new Date()).getTime() - t0.getTime()));
         return plot;
     };
 
@@ -2535,8 +2535,8 @@
     
     $.plot.plugins = [];
 
-    // returns a string with the data d formatted according to fmt
-    $.plot.formatdata = function(d, fmt, monthNames) {
+    // returns a string with the date d formatted according to fmt
+    $.plot.formatDate = function(d, fmt, monthNames) {
         var leftPad = function(n) {
             n = "" + n;
             return n.length == 1 ? "0" + n : n;
@@ -2565,7 +2565,7 @@
                 case 'H': c = leftPad(hours); break;
                 case 'M': c = leftPad(d.getUTCMinutes()); break;
                 case 'S': c = leftPad(d.getUTCSeconds()); break;
-                case 'd': c = "" + d.getUTCdata(); break;
+                case 'd': c = "" + d.getUTCDate(); break;
                 case 'm': c = "" + (d.getUTCMonth() + 1); break;
                 case 'y': c = "" + d.getUTCFullYear(); break;
                 case 'b': c = "" + monthNames[d.getUTCMonth()]; break;
