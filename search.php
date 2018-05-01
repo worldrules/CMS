@@ -24,12 +24,12 @@
             $search = $_POST['search'];
                 
                 
-            $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' ";
-            $search_query = mysqli_query($connection, $query);
+            $query = "SELECT * FROM posts WHERE posts_tags LIKE '%$search%' ";
+            $search_query = mysqli_query($con, $query);
 
             if(!$search_query) {
 
-                die("QUERY FAILED" . mysqli_error($connection));
+                die("QUERY FAILED" . mysqli_error($con));
 
             }
 
@@ -41,10 +41,11 @@
 
             } else {
 
+
     while($row = mysqli_fetch_assoc($search_query)) {
         $post_title = $row['post_title'];
         $post_author = $row['post_author'];
-        $post_data = $row['post_data'];
+        $post_data = $row['post_date'];
         $post_image = $row['post_image'];
         $post_content = $row['post_content'];
 
@@ -83,17 +84,6 @@
 
 
 ?>
-
-    
-
-                
-                
-                
-                
-                
-
-              
-    
 
             </div>
             

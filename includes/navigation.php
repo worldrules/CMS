@@ -1,4 +1,4 @@
-  <?php include "db.php"  ?>
+  <?php require_once "db.php"  ?>
 
 
        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -20,7 +20,7 @@
                    <?php
                     
     $query = "SELECT * FROM categories";
-    $select_all_cate = mysqli_query($connection, $query);
+    $select_all_cate = mysqli_query($con, $query);
 
     while($row = mysqli_fetch_assoc($select_all_cate)) {
         $cat_title = $row['cat_title'];
@@ -30,19 +30,19 @@
     }
       
 ?>
-                       
+
                         <li>
                         <a href="admin">Admin</a>
-<!--
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                  <li>
-                       <a href="#">Contact</a>
-                  
-                     </li>
--->
+
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="#">Services</a>-->
+<!--                    </li>-->
+<!--                  <li>-->
+<!--                       <a href="#">Contact</a>-->
+<!---->
+<!--                     </li>-->
+
 
                      
                      

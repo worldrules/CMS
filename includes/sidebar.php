@@ -1,7 +1,6 @@
         <!-- Blog Sidebar Widgets Column -->               
         <div class="col-md-4">
 
-                  
 
             <!-- Blog Search Well -->
             <div class="well">
@@ -20,25 +19,17 @@
                 <!-- /.input-group -->
                 </div>
 
-                   
-                   
+
                     <!-- Blog Categories Well -->
         <div class="well">
         <?php  
 
         
         $query = "SELECT * FROM categories "; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
-        $select_categories_sidebar = mysqli_query($connection, $query);
-
-        
-
-
+        $select_categories_sidebar = mysqli_query($con, $query);
 
 
         ?>   
-                       
-                       
-                       
                         <h4>Blog Categories</h4>
                         <div class="row">
                             <div class="col-lg-12">
@@ -66,21 +57,9 @@
                     </div>
 
                    
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
                     <!-- Side Widget Well -->
                     <?php  include "widget.php" ?>
 
-                    
-                    
-                    
-                    
-                    
+
 
                 </div>
