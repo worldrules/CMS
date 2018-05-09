@@ -3,18 +3,14 @@
 
 
 
-    <div id="wrapper">
 
-
-
+<div id="wrapper">
 
 
         <!-- Navigation -->
 
-        <?php include "includes/adm_navigation.php" ?>
 
-
-
+    <?php include "includes/adm_navigation.php" ?>
 
 
         <div id="page-wrapper">

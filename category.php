@@ -1,32 +1,48 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Leonardo
+ * Date: 09/05/2018
+ * Time: 01:19
+ */
+?>
+
 <?php include "includes/header.php"; ?>
 
 
 
 
 
-    <!-- Navigation -->
+<!-- Navigation -->
 
 
 <?php require_once "includes/navigation.php"; ?>
 
-   
-   
-    <!-- Page Content -->
-    <div class="container">
 
-        <div class="row">
 
-            <!-- Blog Entries Column -->
-            
-                                   
-               
-            <div class="col-md-8">
-                
-                  <?php
+<!-- Page Content -->
+<div class="container">
 
-                 
-         $query = "SELECT * FROM posts";
-         $select_all_posts_query = mysqli_query($con, $query);
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+
+
+
+        <div class="col-md-8">
+
+            <?php
+
+
+           if(isset($_GET['category'])) {
+
+               $post_category_id = $_GET['category'];
+
+           }
+
+
+            $query = "SELECT * FROM posts WHERE post_category_id = $post_category_id ";
+            $select_all_posts_query = mysqli_query($con, $query);
 
             while($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 $post_id= $row['post_id'];
@@ -35,10 +51,10 @@
                 $post_date= $row['post_date'];
                 $post_image = $row['post_image'];
                 $post_content = substr($row['post_content'], 0,100);
-                                        
-                    ?>
-                    
-                     
+
+                ?>
+
+
                 <!-- First Blog Post -->
 
                 <h2>
@@ -56,44 +72,45 @@
 
                 <hr>
 
-             
-                    
-                    
-        
-                    
-                    
-                    
-                    
-             <?php } ?>       
-                
-       
-                
-        
-      </div>  
 
-                
 
-            <!-- Blog Sidebar Widgets Column -->
-            
-              
-                
-                
-    <?php include "includes/sidebar.php"; ?>
-                
-                        
-             
 
-    
+
+
+
+
+
+            <?php } ?>
+
+
+
 
         </div>
-        <!-- /.row -->
 
-        <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-      
-      
-<?php include "includes/footer.php"; ?>
+
+        <!-- Blog Sidebar Widgets Column -->
+
+
+
+
+        <?php include "includes/sidebar.php"; ?>
+
+
+
+
+
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <?php include "includes/footer.php"; ?>
+

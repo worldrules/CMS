@@ -1,7 +1,16 @@
+
+<?php include "../includes/db.php"; ?>
+<?php include "functions.php"; ?>
+
+<?php ob_start();
+header('Content-Type: text/html; charset=ISO-8859-1');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

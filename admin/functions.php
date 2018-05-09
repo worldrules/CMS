@@ -78,3 +78,14 @@ function deleteCategories() {
 
     }
 }
+
+
+function testQuery($result) {
+    global $con;
+    if(!$result) {
+
+        die( "QUERY FAILED" . mysqli_error($con));
+    }
+
+    return $result;
+}
