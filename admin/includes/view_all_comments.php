@@ -57,11 +57,30 @@
 
         echo "<td>{$comment_email}</td>";
         echo "<td>{$comment_status}</td>";
-        echo "<td>Some Title</td>";
+
+
+        $query = "SELECT * FROM posts WHERE post_id = $comment_post_id ";
+        $select_post_id_query = mysqli_query($con, $query);
+
+        while ($row = mysqli_fetch_assoc($select_post_id_query)) {
+
+            $post_id = $row['post_id'];
+            $post_title = $row['post_title'];
+
+            echo "<td><a href='../post.php?p_id=$post_id'>$post_title</a></td>";
+
+        }
+
+
+
+
+
+
+
         echo "<td>{$comment_date}</td>";
-        echo "<td><a href='posts.php?source=edit_post&p_id='>Approve</a></td>";
-        echo "<td><a href='posts.php?delete='>Unapprove</a></td>";
-        echo "<td><a href='posts.php?delete='>Delete</a></td>";
+        echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
+        echo "<td><a href='comments.php?unnaprove=$comment_id'>Unapprove</a></td>";
+        echo "<td><a href='comments.php?delete=$comment_id'>Delete</a></td>";
         echo "</tr>";
 
 
@@ -74,33 +93,48 @@
 
 
 
-    <!--    <td>10</td>-->
-    <!--    <td>Bootstrap</td>-->
-    <!--    <td>Status</td>-->
-    <!--    <td>Image</td>-->
-    <!--    <td>Tags</td>-->
-    <!--    <td>Comments</td>-->
-    <!--    <td>Date</td>-->
-    <!--    <td>Leonardo Nunes Carvalho</td>-->
-    <!--    <td>Dev</td>-->
-
-
-
-
-
     </tbody>
 </table>
 
 
+
 <?php
+// query para aprovar um comentario e fazer update
+if(isset($_GET['approve'])) {
+
+    $the_comment_id = $_GET['approve'];
+
+    $query = "UPDATE comments SET comment_status = 'approved' WHERE comment_id = '$the_comment_id' ";
+    $approve_comment_query = mysqli_query($con, $query);
+    header("Location: comments.php");
+}
+
+
+//------------------------------------------------------------------------------------------------------------------//
+// query para nao aprovar um comentario e fazer update
+if(isset($_GET['unnaprove'])) {
+
+
+    $the_comment_id = $_GET['unnaprove'];
+
+    $query = "UPDATE comments SET comment_status = 'unnaproved' WHERE comment_id = '$the_comment_id' ";
+    $unnaprove_comment_query = mysqli_query($con, $query);
+    header("Location: comments.php");
+}
+
+
+
+//------------------------------------------------------------------------------------------------------------------//
+// query para deletar um comentario
 
 if(isset($_GET['delete'])) {
 
 
-    $the_post_id = $_GET['delete'];
+    $the_comment_id = $_GET['delete'];
 
-    $query = "DELETE FROM posts WHERE post_id = {$the_post_id} ";
+    $query = "DELETE FROM comments WHERE comment_id = {$the_comment_id} ";
     $delete_query = mysqli_query($con, $query);
+    header("Location: comments.php");
 }
 
 ?>

@@ -963,90 +963,141 @@
     <table id="242" parent="2" name="categories">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="243" parent="2" name="posts">
+    <table id="243" parent="2" name="comments">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="244" parent="242" name="cat_id">
+    <table id="244" parent="2" name="posts">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="245" parent="242" name="cat_id">
       <Position>1</Position>
       <DataType>int(3)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="242" name="cat_title">
+    <column id="246" parent="242" name="cat_title">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="246" parent="242" name="PRIMARY">
+    <key id="247" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cat_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="247" parent="243" name="post_id">
+    <column id="248" parent="243" name="comment_id">
+      <Position>1</Position>
+      <DataType>int(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="243" name="comment_post_id">
+      <Position>2</Position>
+      <DataType>int(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="243" name="comment_author">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="243" name="comment_email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="243" name="comment_content">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="243" name="comment_status">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="243" name="comment_date">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="255" parent="243" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>comment_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="256" parent="244" name="post_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="243" name="post_category_id">
+    <column id="257" parent="244" name="post_category_id">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(3)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="243" name="post_title">
+    <column id="258" parent="244" name="post_title">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="243" name="post_author">
+    <column id="259" parent="244" name="post_author">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="243" name="post_date">
+    <column id="260" parent="244" name="post_date">
       <Position>5</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="243" name="post_image">
+    <column id="261" parent="244" name="post_image">
       <Position>6</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="243" name="post_content">
+    <column id="262" parent="244" name="post_content">
       <Position>7</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="243" name="posts_tags">
+    <column id="263" parent="244" name="posts_tags">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="243" name="post_comment_count">
+    <column id="264" parent="244" name="post_comment_count">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="243" name="post_status">
+    <column id="265" parent="244" name="post_status">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;draft&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="257" parent="243" name="PRIMARY">
+    <key id="266" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>post_id</ColNames>
       <Primary>1</Primary>

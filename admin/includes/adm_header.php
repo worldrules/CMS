@@ -3,7 +3,7 @@
 <?php include "functions.php"; ?>
 
 <?php ob_start();
-header('Content-Type: text/html; charset=ISO-8859-1');
+//header('Content-Type: text/html; charset=ISO-8859-1');
 ?>
 
 <!DOCTYPE html>
