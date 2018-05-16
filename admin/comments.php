@@ -27,8 +27,8 @@
                 <div class="col-lg-12">
 
                     <h1 class="page-header">
-                        Posts
-                        <small>As Postagens</small>
+                        CMS
+                        <small>Comments</small>
                     </h1>
 
                     <?php

@@ -55,6 +55,7 @@
             $cat_title = $row['cat_title'];
 
                 echo "<td>{$cat_title}</td>";
+                echo "<td>{$cat_title}</td>";
             }
 
         echo "<td>{$post_status}</td>";

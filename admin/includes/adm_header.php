@@ -1,9 +1,26 @@
 
 <?php include "../includes/db.php"; ?>
 <?php include "functions.php"; ?>
-
 <?php ob_start();
+session_start();
 //header('Content-Type: text/html; charset=ISO-8859-1');
+
+
+if(!isset($_SESSION['user_role'])) {
+
+
+    header("Location: ../index.php");
+
+
+}
+
+
+
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>

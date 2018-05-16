@@ -7,15 +7,7 @@
  */
 ?>
 
-<?php
-/**
- * Created by PhpStorm.
- * User: Leonardo
- * Date: 04/05/2018
- * Time: 18:23
- */
 
-?>
 
 <?php include "includes/adm_header.php" ?>
 
@@ -36,7 +28,7 @@
 
                     <h1 class="page-header">
                         CMS
-                        <small>Posts</small>
+                        <small>Users</small>
                     </h1>
 
                     <?php
@@ -52,38 +44,29 @@
 
                     switch ($source) {
 
-                    case 'add_post';
-                        include "includes/add_post.php";
-                        break;
+                        case 'add_user';
+                            include "includes/add_user.php";
+                            break;
 
-                    case 'edit_post';
-                        include "includes/edit_post.php";
-                        break;
+                        case 'edit_user';
+                            include "includes/edit_user.php";
+                            break;
 
-                    case '34';
-                    echo "NICE";
-                    break;
-                    case '34';
-                    echo "NICE";
-                    break;
+                        case '34';
+                            echo "NICE";
+                            break;
+                        case '34';
+                            echo "NICE";
+                            break;
 
 
                         default:
 
-                            include "includes/view_all_posts.php";
+                            include "includes/view_all_users.php";
 
                             break;
 
                     }
-
-
-
-
-
-
-
-
-
 
                     ?>
 
@@ -95,18 +78,17 @@
 
 
 
-
-                    </div>
                 </div>
-
-
-                <!-- /.row -->
             </div>
-            <!-- /.container-fluid -->
 
+
+            <!-- /.row -->
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /.container-fluid -->
 
-        <?php include "includes/adm_footer.php" ?>
+    </div>
+    <!-- /#page-wrapper -->
+
+    <?php include "includes/adm_footer.php" ?>
 
 
