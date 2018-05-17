@@ -20,6 +20,8 @@
         <th>Approve</th>
         <th>Unapprove</th>
         <th>Delete</th>
+
+
     </tr>
     </thead>
     <tbody>
@@ -58,7 +60,6 @@
         echo "<td>{$comment_email}</td>";
         echo "<td>{$comment_status}</td>";
 
-
         $query = "SELECT * FROM posts WHERE post_id = $comment_post_id ";
         $select_post_id_query = mysqli_query($con, $query);
 
@@ -75,11 +76,11 @@
 
 
 
-
-
         echo "<td>{$comment_date}</td>";
+
+
         echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
-        echo "<td><a href='comments.php?unnaprove=$comment_id'>Unapprove</a></td>";
+        echo "<td><a href='comments.php?unapprove=$comment_id'>Unapprove</a></td>";
         echo "<td><a href='comments.php?delete=$comment_id'>Delete</a></td>";
         echo "</tr>";
 
@@ -112,13 +113,13 @@ if(isset($_GET['approve'])) {
 
 //------------------------------------------------------------------------------------------------------------------//
 // query para nao aprovar um comentario e fazer update
-if(isset($_GET['unnaprove'])) {
+if(isset($_GET['unapprove'])) {
 
 
-    $the_comment_id = $_GET['unnaprove'];
+    $the_comment_id = $_GET['unapprove'];
 
-    $query = "UPDATE comments SET comment_status = 'unnaproved' WHERE comment_id = '$the_comment_id' ";
-    $unnaprove_comment_query = mysqli_query($con, $query);
+    $query = "UPDATE comments SET comment_status = 'unapproved' WHERE comment_id = '$the_comment_id' ";
+    $unapprove_comment_query = mysqli_query($con, $query);
     header("Location: comments.php");
 }
 

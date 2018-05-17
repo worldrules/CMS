@@ -42,7 +42,7 @@
         echo "<tr>";
         echo "<td>{$user_id}</td>";
         echo "<td>{$username}</td>";
-        echo "<td>{$user_role}</td>";
+
 
 //
 //        $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}  "; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
@@ -55,6 +55,7 @@
 //            echo "<td>{$cat_title}</td>";
 //        }
 
+        echo "<td>{$user_firstname}</td>";
         echo "<td>{$user_lastname}</td>";
         echo "<td>{$user_email}</td>";
         echo "<td>{$user_role}</td>";
@@ -108,7 +109,7 @@ if(isset($_GET['change_to_admin'])) {
 
     $the_user_id = $_GET['change_to_admin'];
 
-    $query = "UPDATE users SET user_role = 'admin' WHERE user_id = '$the_user_id' ";
+    $query = "UPDATE users SET user_role = 'Admin' WHERE user_id = '$the_user_id' ";
     $change_to_admin_query = mysqli_query($con, $query);
     header("Location: users.php");
 }
@@ -121,7 +122,7 @@ if(isset($_GET['change_to_sub'])) {
 
     $the_user_id = $_GET['change_to_sub'];
 
-    $query = "UPDATE users SET user_role = 'subscribed' WHERE user_id = '$the_user_id' ";
+    $query = "UPDATE users SET user_role = 'Subscriber' WHERE user_id = '$the_user_id' ";
     $change_to_sub_query= mysqli_query($con, $query);
     header("Location: users.php");
 }
