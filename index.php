@@ -37,12 +37,7 @@
                 $post_content = substr($row['post_content'], 0,100);
                 $post_status = $row['post_status'];
 
-                if($post_status !== 'published'){
-
-                echo "<h1 class='text-center'>NO POST HERE SORRY !</h1>";
-
-                } else {
-
+                if($post_status == 'published'){
 
 
                     ?>
@@ -58,19 +53,16 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date ?></p>
                 <hr>
-                <img class="img-responsive" src="images/<?php echo $post_image ?> " alt="">
-                <hr>
+
+                <a href="post.php?p_id=<?php echo $post_id ?>">
+                <img width="500" class="img-responsive" src="images/<?php echo $post_image ?> " alt="">
+                </a>
+                    <hr>
                 <p><?php echo $post_content?></p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
 
-             
-                    
-                    
-        
-                    
-                    
+
                     
                     
              <?php } }?>

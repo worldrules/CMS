@@ -1,15 +1,74 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Leonardo
- * Date: 07/05/2018
- * Time: 03:54
- */
+
+if(isset($_POST['checkBoxArray'])) {
+
+    foreach  (($_POST['checkBoxArray']) as $postValueId) {
+
+    $bulk_options = $_POST['bulk_options'];
+
+        switch ($bulk_options) {
+            case 'published':
+
+                $query = "UPDATE posts SET post_status = '{$bulk_options}' WHERE post_id = '{$postValueId}' ";
+                $update_to_published_status = mysqli_query($con,$query);
+
+                testQuery($update_to_published_status) ;
+
+              break;
+
+            case 'draft':
+
+                $query = "UPDATE posts SET post_status = '{$bulk_options}' WHERE post_id = '{$postValueId}' ";
+                $update_to_draft_status = mysqli_query($con,$query);
+
+                testQuery($update_to_draft_status) ;
+
+                break;
+
+            case 'delete':
+
+                $query = "DELETE FROM posts WHERE post_id = '{$postValueId}' ";
+                $update_to_delete_status = mysqli_query($con,$query);
+
+                testQuery($update_to_delete_status);
+
+                break;
+
+        }
+
+    }
+}
+
+
+
 ?>
 
+<form action="" method="post">
 <table class="table table-bordered table-hover">
+
+        <div id="bulkOptionContainer" class="col-xs-4" style="padding: 0px;">
+
+        <select class="form-control" name="bulk_options" id="">
+
+        <option value="">Select Options</option>
+        <option value="published">Publish</option>
+        <option value="draft">Draft</option>
+        <option value="delete">Delete</option>
+
+        </select>
+        </div>
+
+        <div class="col-xs-4">
+
+            <input type="submit" name="submit" class="btn btn-success" value="Apply">
+            <a class="btn btn-primary" href="add_post.php">Add New</a>
+            
+        </div>
+
+
     <thead>
     <tr>
+        <th><input id="selectAllBoxes" type="checkbox"></th>
         <th>Id</th>
         <th>Author</th>
         <th>Title</th>
@@ -42,6 +101,13 @@
         $post_date = $row['post_date'];
 
         echo "<tr>";
+
+        ?>
+
+        <td><input class='checkBoxes' type='checkbox' name="checkBoxArray[]" value='<?php echo $post_id ?>'></td>
+
+    <?php
+
         echo "<td>{$post_id}</td>";
         echo "<td>{$post_author}</td>";
         echo "<td>{$post_title}</td>";
@@ -55,7 +121,7 @@
             $cat_title = $row['cat_title'];
 
                 echo "<td>{$cat_title}</td>";
-                echo "<td>{$cat_title}</td>";
+
             }
 
         echo "<td>{$post_status}</td>";
@@ -93,7 +159,7 @@
 
     </tbody>
 </table>
-
+</form>
 
 <?php
 

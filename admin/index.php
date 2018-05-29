@@ -172,6 +172,12 @@ echo "<div class='huge'>{$category_count}</div>"
                 <!-- /.row -->
 
                 <?php
+//seleciona só os posts published e conta numero de linhas--------------------------------------------------------------/
+                $query = "SELECT * FROM posts WHERE post_status = 'published' ";
+
+                $select_all_published_posts = mysqli_query($con, $query);
+                $post_published_count = mysqli_num_rows($select_all_published_posts);
+
 //seleciona só os posts drafts e conta numero de linhas--------------------------------------------------------------/
                 $query = "SELECT * FROM posts WHERE post_status = 'draft' ";
 
@@ -216,10 +222,10 @@ echo "<div class='huge'>{$category_count}</div>"
 
 // Cria duas variaveis que sao arrays, uma com os indices outra com os counts
 // Loop , pega cada elemento do array em cada passada do loop , tanto num indice quanto no outro e coloca dentro do array principal
-                    $element_text = ['Active Posts','Draft Posts','Comments','Pending Comments','Users','Subscribers','Categories'];
-                    $element_count = [$post_count,$post_draft_count,$comment_count,$unapproved_comment_count,$users_count,$subscriber_count,$category_count];
+                    $element_text = ['All Posts','Active Posts','Draft Posts','Comments','Pending Comments','Users','Subscribers','Categories'];
+                    $element_count = [$post_count,$post_published_count,$post_draft_count,$comment_count,$unapproved_comment_count,$users_count,$subscriber_count,$category_count];
 
-                    for($i = 0; $i < 7; $i++){
+                    for($i = 0; $i < 8; $i++){
 
                         echo "['{$element_text[$i]}' " . "," . "{$element_count[$i]}],";
 

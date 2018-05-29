@@ -63,23 +63,19 @@
 
 
 
-
 //Query que faz update de todos os campos .. tem mais coisa pra lá >>>>>>>>>>>>
             $query = "UPDATE posts SET post_title = '$post_title', post_category_id = '$post_category_id', post_date = now(), post_author = '$post_author', post_status = '$post_status', posts_tags = '$posts_tags', post_content = '$post_content', post_image = '$post_image' WHERE post_id = {$the_post_id} ";
 
             $update_post = mysqli_query($con, $query);
 
            testQuery($update_post);
-            
+
+            echo "<p class='alert-success'>Post Updated. <a href='../post.php?p_id={$the_post_id}'>View Post</a> or <a href='posts.php'>Edit More Posts</a></p>";
 
 
         }
 
-
-
 ?>
-
-
 
 
 <form action="" method="post" enctype="multipart/form-data">
@@ -122,12 +118,36 @@
         <input value="<?php echo $post_author; ?>" type="text" class="form-control" name="post_author">
     </div>
 
-
     <div class="form-group">
         <label for="">Post Status</label>
-        <input value="<?php echo $post_status; ?>" type="text" class="form-control" name="post_status">
-    </div>
 
+        <select name="post_status" id="">
+
+            <option value='<?php echo $post_status; ?>'><?php echo $post_status; ?></option>
+
+            <?php
+
+            if($post_status == 'published' ) {
+
+
+                echo "<option value='draft'>draft</option>";
+
+
+            } else {
+
+
+                echo "<option value='published'>publish</option>";
+
+
+            }
+
+
+
+            ?>
+
+
+        </select>
+    </div>
 
 
     <div class="form-group">
@@ -143,7 +163,7 @@
 
     <div class="form-group">
         <label for="post_content">Post Content</label>
-        <textarea  class="form-control "name="post_content" id="" cols="30" rows="10"><?php echo $post_content; ?>
+        <textarea  class="form-control "name="post_content" id="body" cols="30" rows="10"><?php echo $post_content; ?>
 
             </textarea>
     </div>
@@ -155,4 +175,5 @@
 
 
 </form>
+
 

@@ -38,6 +38,17 @@
         testQuery($create_user_query);
 
 
+
+        echo "User Created: " . " " . "<a class='alert-success' href='users.php'>View Users</a> " ;
+
+
+
+
+
+
+
+
+
     }
 
 ?>
