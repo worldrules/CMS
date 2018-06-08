@@ -36,6 +36,11 @@
         //testa a query
         testQuery($create_post_query);
 
+        $the_post_id = mysqli_insert_id($con);
+
+        echo "<p class='alert-success'>Post Created. <a href='../post.php?p_id={$the_post_id}'>View Post</a> or <a href='posts.php'>Edit More Posts</a></p>";
+
+
 
     }
 
@@ -85,7 +90,6 @@
 
 
             <div class="form-group">
-                <label for="">Post Status</label>
 
                 <select name="post_status" id="">
                     <option value="draft">Post Status</option>
