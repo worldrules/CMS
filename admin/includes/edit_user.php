@@ -53,11 +53,33 @@ if(isset($_POST['edit_user'])) {
 
 //            move_uploaded_file($post_image_temp, "../images/$post_image");
 //
-    $query = "UPDATE users SET user_firstname = '$user_firstname', user_lastname = '$user_lastname', user_role = '$user_role', username = '$username', user_email = '$user_email', user_password = '$user_password' WHERE user_id = {$user_id} ";
+
+        $query = "SELECT randSalt FROM users";
+        $select_randsalt_query = mysqli_query($con, $query);
+
+        if(!$select_randsalt_query) {
+
+            die("QUERY FAILED ". mysqli_error($con));
+
+        }
+
+
+        $row = mysqli_fetch_array($select_randsalt_query);
+        $salt = $row['randSalt'];
+        $hashed_password = crypt($user_password, $salt);
+
+
+
+
+
+    $query = "UPDATE users SET user_firstname = '$user_firstname', user_lastname = '$user_lastname', user_role = '$user_role', username = '$username', user_email = '$user_email', user_password = '{$hashed_password}' WHERE user_id = {$user_id} ";
 
     $edit_user_query = mysqli_query($con, $query);
 
     testQuery($edit_user_query);
+
+    // verificar pq tem erro aqui <<<
+    echo "<p class='alert-success'>User Updated. <a href='users.php?source=edit_user&edit_user={$user_id}'>View User</a> or <a href='users.php'>Edit More Users</a></p>";
 
 }
 
@@ -81,7 +103,7 @@ if(isset($_POST['edit_user'])) {
 
         <select name="user_role" id="">
 
-            <option value="Subscriber"><?php echo $user_role; ?></option>
+            <option value="<?php echo $user_role; ?>"><?php echo $user_role; ?></option>
 
             <?php
 

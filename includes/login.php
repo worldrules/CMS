@@ -29,19 +29,23 @@ session_start();
 
         while ($row = mysqli_fetch_array($select_user_query)) {
 
-            echo $db_id = $row['user_id'];
-            echo $db_username = $row['username'];
-            echo $db_user_password = $row['user_password'];
-            echo $db_user_firstname = $row['user_firstname'];
-            echo $db_user_lastname = $row['user_lastname'];
-            echo $db_user_role = $row['user_role'];
+            $db_id = $row['user_id'];
+            $db_username = $row['username'];
+            $db_user_password = $row['user_password'];
+            $db_user_firstname = $row['user_firstname'];
+            $db_user_lastname = $row['user_lastname'];
+            $db_user_role = $row['user_role'];
         }
 
+        $password = crypt($password, $db_user_password);
+
+
+
     if($username === $db_username && $password === $db_user_password) {
-        echo $_SESSION['username'] = $db_username;
-        echo $_SESSION['firstname'] = $db_user_firstname;
-        echo $_SESSION['lastname'] = $db_user_lastname;
-        echo $_SESSION['user_role'] = $db_user_role;
+        $_SESSION['username'] = $db_username;
+        $_SESSION['firstname'] = $db_user_firstname;
+        $_SESSION['lastname'] = $db_user_lastname;
+        $_SESSION['user_role'] = $db_user_role;
 
         header("Location:../admin");
 
