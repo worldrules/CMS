@@ -26,7 +26,7 @@
                             Welcome to Admin
 <!-- Isso náo era pra estar aqui mais fodace .-->
                             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
                             <small><?php echo $_SESSION['username']; ?></small>
                         </h1>
 

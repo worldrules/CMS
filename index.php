@@ -23,6 +23,45 @@
             <div class="col-md-8">
                 
                   <?php
+        if(isset($_GET['page'])) {
+
+
+            $page = $_GET['page'];
+
+
+
+
+
+        } else {
+
+            $page = "";
+
+        }
+
+
+        if($page == "" || $page == 1) {
+
+            $page_1 = 0;
+
+
+        } else {
+
+            $page_1 = ($page * 5) - 5;
+        }
+
+
+
+
+
+
+
+
+
+          $post_query_count = "SELECT * FROM posts";
+          $find_count = mysqli_query($con, $post_query_count);
+          $count = mysqli_num_rows($find_count);
+
+          $count = ceil($count / 5);
 
                  
          $query = "SELECT * FROM posts ";
@@ -45,11 +84,12 @@
                      
                 <!-- First Blog Post -->
 
+                <h1><?php echo $count; ?></h1>
                 <h2>
                     <a href="post.php?p_id=<?php echo $post_id ?>"><?php echo $post_title ?></a>
                 </h2>
                 <p class="lead">
-                    by <a href="index.php"><?php echo $post_author ?></a>
+                    by <a href="author_post.php?author=<?php echo $post_author ?>&p_id=<?php echo $post_id ?>"><?php echo $post_author ?></a>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date ?></p>
                 <hr>
@@ -90,6 +130,23 @@
         <!-- /.row -->
 
         <hr>
+
+        <ul class="pager">
+
+            <?php
+
+            for($i = 1; $i <= $count; $i++) {
+
+                echo "<li><a href='index.php?page={$i}'>{$i}</a></li>";
+            }
+
+
+
+
+
+            ?>
+
+        </ul>
 
         <!-- Footer -->
         <footer>
