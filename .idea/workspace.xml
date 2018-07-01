@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4c146f7-9b9d-4849-9248-053206b23b0d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2bbeaae4-0ad5-4dbf-a79d-92b98e160c77.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2bbeaae4-0ad5-4dbf-a79d-92b98e160c77.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/adm_header.php" afterPath="$PROJECT_DIR$/admin/includes/adm_header.php" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/view_all_posts.php" afterPath="$PROJECT_DIR$/admin/includes/view_all_posts.php" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/post.php" afterPath="$PROJECT_DIR$/post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="494">
-              <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+              <caret line="66" column="41" lean-forward="false" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
               <folding>
                 <marker date="1530223189333" expanded="true" signature="700:719" ph="SELECT * FRO... posts" />
                 <marker date="1530223189333" expanded="true" signature="910:929" ph="SELECT * FRO... posts" />
@@ -363,7 +356,7 @@
       <workItem from="1529695808228" duration="1225000" />
       <workItem from="1529952725681" duration="10967000" />
       <workItem from="1530219372161" duration="4029000" />
-      <workItem from="1530483503399" duration="9000" />
+      <workItem from="1530483503399" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="Testando ferramenta">
       <created>1524007106895</created>
@@ -442,11 +435,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529617634715</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Pequeno Comito =D">
+      <created>1530483549688</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1530483549688</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202208000" />
+    <option name="totallyTimeSpent" value="202247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -843,6 +843,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -850,6 +851,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="811">
           <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+          <folding>
+            <marker date="1530220345101" expanded="true" signature="240:321" ph="UPDATE posts... " />
+            <marker date="1530220345101" expanded="true" signature="532:613" ph="UPDATE posts... " />
+            <marker date="1530220345101" expanded="true" signature="819:869" ph="DELETE FROM posts... " />
+            <marker date="1530220345101" expanded="true" signature="1075:1127" ph="SELECT * FRO... posts" />
+            <marker date="1530220345101" expanded="true" signature="1798:1927" ph="INSERT INTO posts... " />
+            <marker date="1530220345101" expanded="true" signature="3429:3470" ph="SELECT * FRO... posts" />
+            <marker date="1530220345101" expanded="true" signature="4371:4411" ph="SELECT * FRO... categories" />
+            <marker date="1530220345101" expanded="true" signature="5823:5857" ph="DELETE FROM posts... " />
+            <marker date="1530220345101" expanded="true" signature="6041:6094" ph="UPDATE posts... " />
+            <marker date="1530220345101" expanded="true" signature="6041:6095" ph="UPDATE posts... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -881,7 +894,7 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+          <caret line="66" column="41" lean-forward="false" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
           <folding>
             <marker date="1530223189333" expanded="true" signature="700:719" ph="SELECT * FRO... posts" />
             <marker date="1530223189333" expanded="true" signature="910:929" ph="SELECT * FRO... posts" />
