@@ -1,6 +1,6 @@
 <?php
 
-$db['db_host'] = "mysql:host=us-cdbr-iron-east-04.cleardb.net";
+$db['db_host'] = "mysql://bb4d3eb9810e2e:ca1732ea@us-cdbr-iron-east-04.cleardb.net";
 $db['db_user'] = "bb4d3eb9810e2e";
 $db['db_pass'] = "ca1732ea";
 $db['db_name'] = "heroku_c93c337c3424fd4";
