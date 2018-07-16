@@ -22,7 +22,7 @@
 
         while ($row = mysqli_fetch_assoc($select_posts_by_id)) {
             $post_id = $row['post_id'];
-            $post_author = $row['post_author'];
+            $post_user = $row['post_user'];
             $post_title = $row['post_title'];
             $post_category_id = $row['post_category_id'];
             $post_status = $row['post_status'];
@@ -37,7 +37,7 @@
         if(isset($_POST['update_post'])) {
 
             $post_title = $_POST['post_title'];
-            $post_author = $_POST['post_author'];
+            $post_user = $_POST['post_user'];
             $post_category_id = $_POST['post_category_id'];
             $post_status = $_POST['post_status'];
 
@@ -64,7 +64,7 @@
 
 
 //Query que faz update de todos os campos .. tem mais coisa pra lá >>>>>>>>>>>>
-            $query = "UPDATE posts SET post_title = '$post_title', post_category_id = '$post_category_id', post_date = now(), post_author = '$post_author', post_status = '$post_status', posts_tags = '$posts_tags', post_content = '$post_content', post_image = '$post_image' WHERE post_id = {$the_post_id} ";
+            $query = "UPDATE posts SET post_title = '$post_title', post_category_id = '$post_category_id', post_date = now(), post_user = '$post_user', post_status = '$post_status', posts_tags = '$posts_tags', post_content = '$post_content', post_image = '$post_image' WHERE post_id = {$the_post_id} ";
 
             $update_post = mysqli_query($con, $query);
 
@@ -112,14 +112,33 @@
         </select>
     </div>
 
+    <div class="form-group">
+        <label for="users">Users</label>
+        <select name="post_user" id="">
+            <?php echo "<option value= '{$post_user}'>{$post_user}</option>";?>
+
+
+            <?php
+
+            $users_query = "SELECT * FROM users"; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
+            $select_users = mysqli_query($con, $users_query);
+
+            testQuery($select_users);
+
+            while($row = mysqli_fetch_assoc($select_users)) {
+                $user_id = $row['user_id'];
+                $username = $row['username'];
+
+                echo "<option value= '{$username}'>{$username}</option>";
+
+
+            }
+
+            ?>
+        </select>
+
 
     <div class="form-group">
-        <label for="">Post Author</label>
-        <input value="<?php echo $post_author; ?>" type="text" class="form-control" name="post_author">
-    </div>
-
-    <div class="form-group">
-        <label for="">Post Status</label>
 
         <select name="post_status" id="">
 
@@ -144,9 +163,9 @@
 
 
             ?>
-
-
         </select>
+
+
     </div>
 
 

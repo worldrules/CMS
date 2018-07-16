@@ -28,16 +28,16 @@
             if(isset($_GET['p_id'])) {
 
                 $the_post_id     = $_GET['p_id'];
-                $the_post_author = $_GET['author'];
+                $the_post_user = $_GET['user'];
             }
 
-            $query = "SELECT * FROM posts WHERE post_author = '{$the_post_author}' ";
+            $query = "SELECT * FROM posts WHERE post_user = '{$the_post_user}' ";
             $select_all_posts_query = mysqli_query($con, $query);
 
             while($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 $post_id= $row['post_id'];
                 $post_title = $row['post_title'];
-                $post_author = $row['post_author'];
+                $post_user = $row['post_user'];
                 $post_date= $row['post_date'];
                 $post_image = $row['post_image'];
                 $post_content = $row['post_content'];
@@ -50,7 +50,7 @@
                     <a href="post.php?p_id=<?php echo $post_id ?>"><?php echo $post_title ?></a>
                 </h2>
                 <p class="lead">
-                    <h2>Posts from <?php echo $post_author ?></h2></a>
+                    <h2>Posts from <?php echo $post_user ?></h2></a>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date ?></p>
                 <hr>
@@ -73,14 +73,14 @@
 
                 $the_post_id = $_GET['p_id'];
 
-                $comment_author = $_POST['comment_author'];
+                $comment_user = $_POST['comment_user'];
                 $comment_email = $_POST['comment_email'];
                 $comment_content = $_POST['comment_content'];
 
-                if(!empty($comment_author) && !empty($comment_email) && !empty($comment_content)) {
+                if(!empty($comment_user) && !empty($comment_email) && !empty($comment_content)) {
 
-                    $query = "INSERT INTO comments (comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date )";
-                    $query.= "VALUES ($the_post_id, '{$comment_author}', '{$comment_email}', '{$comment_content}', 'unapproved', now())";
+                    $query = "INSERT INTO comments (comment_post_id, comment_user, comment_email, comment_content, comment_status, comment_date )";
+                    $query.= "VALUES ($the_post_id, '{$comment_user}', '{$comment_email}', '{$comment_content}', 'unapproved', now())";
 
                     $create_comment_query = mysqli_query($con, $query);
 
