@@ -112,9 +112,9 @@
 
                     //------------------------------------------------------------------------------------------------------------------//
 //query para fazer update no post, e aumentar a quantidade de comentarios e atualizar
-                    $query = "UPDATE posts SET post_comment_count = post_comment_count + 1 ";
-                    $query .= "WHERE post_id = $the_post_id " ;
-                    $update_comment_count = mysqli_query($con, $query);
+//                    $query = "UPDATE posts SET post_comment_count = post_comment_count + 1 ";
+//                    $query .= "WHERE post_id = $the_post_id " ;
+//                    $update_comment_count = mysqli_query($con, $query);
 
 
 

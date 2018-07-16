@@ -1,40 +1,6 @@
 <?php include "includes/adm_header.php" ?>
     <div id="wrapper">
 
-        <?php
-
-//Captura uma session e coloca na variável
-        $session = session_id();
-        $time = time();
-        $time_out_in_seconds = 60;
-        $time_out = $time - $time_out_in_seconds;
-
-        $query = "SELECT * FROM users_online WHERE session = '$session' ";
-        $send_query = mysqli_query($con, $query);
-        $count = mysqli_num_rows($send_query);
-
-        if($count == NULL) {
-
-            mysqli_query($con, "INSERT INTO users_online(session, time) VALUES('$session','$time')");
-
-        } else {
-
-            //PROXIMA AULA continuar a insercao de dados no users_online caso nao for nulo.
-
-
-        }
-
-
-
-        ?>
-
-
-
-
-
-
-
-
 
 
 
@@ -61,6 +27,7 @@
                             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
                             <small><?php echo $_SESSION['username']; ?></small>
                         </h1>
+
 
 
                     </div>

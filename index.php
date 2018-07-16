@@ -30,7 +30,7 @@
                 
                   <?php
 
-        $per_page = 2;
+        $per_page = 5;
 
         if(isset($_GET['page'])) {
 
@@ -73,7 +73,8 @@
           $count = ceil($count / $per_page);
 
                  
-         $query = "SELECT * FROM posts LIMIT $page_1, $per_page ";
+       $query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT $page_1, $per_page ";
+//         $query = "SELECT * FROM posts ORDER BY post_id DESC";
          $select_all_posts_query = mysqli_query($con, $query);
 
             while($row = mysqli_fetch_assoc($select_all_posts_query)) {
@@ -114,7 +115,7 @@
 
                     
                     
-             <?php } }?>
+             <?php }  } ?>
                 
        
                 

@@ -1,10 +1,11 @@
-
-<?php include "../includes/db.php"; ?>
-<?php include "functions.php"; ?>
 <?php ob_start();
-session_start();
-//header('Content-Type: text/html; charset=ISO-8859-1');
+include "../includes/db.php";
+include "functions.php";
 
+session_start(); ?>
+
+
+<?php
 
 if(!isset($_SESSION['user_role'])) {
 
@@ -21,7 +22,7 @@ if(!isset($_SESSION['user_role'])) {
 <html lang="en">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
