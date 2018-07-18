@@ -62,13 +62,31 @@
 
 
 
+                  if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'Admin' ) {
+
+                      $post_query_count = "SELECT * FROM posts";
+
+
+                  } else {
+
+
+                      $post_query_count = "SELECT * FROM posts WHERE post_status = 'published'";
+
+                  }
 
 
 
 
-          $post_query_count = "SELECT * FROM posts";
+
+
           $find_count = mysqli_query($con, $post_query_count);
           $count = mysqli_num_rows($find_count);
+
+          if($count < 1 ) {
+
+              echo "<h1 class='text-center'>No Posts Available</h1>";
+
+          } else {
 
           $count = ceil($count / $per_page);
 
@@ -115,7 +133,7 @@
 
                     
                     
-             <?php }  } ?>
+             <?php }  } } ?>
                 
        
                 

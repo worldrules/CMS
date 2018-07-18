@@ -38,11 +38,29 @@
                     die("Query Failed");
                 }
 
+                if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'Admin' ) {
+
+                    $query = "SELECT * FROM posts WHERE post_id = $the_post_id ";
 
 
+                } else {
 
-            $query = "SELECT * FROM posts WHERE post_id = $the_post_id ";
+
+                    $query = "SELECT * FROM posts WHERE post_id = $the_post_id AND  post_status = 'published'";
+
+                }
+
+
             $select_all_posts_query = mysqli_query($con, $query);
+
+
+            if(mysqli_num_rows($select_all_posts_query) < 1 ) {
+
+                echo "<h1 class='text-center'>No Posts Available</h1>";
+
+
+            } else {
+
 
             while($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 $post_id= $row['post_id'];
@@ -77,11 +95,7 @@
 
 
 
-            } else {
 
-            header("Location: index.php");
-
-            }
 
             ?>
 
@@ -203,7 +217,12 @@
 
 
 
-         <?php   } ?>
+         <?php } } } else {
+
+                    header("Location: index.php");
+
+
+            } ?>
 
 
 
