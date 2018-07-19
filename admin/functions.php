@@ -1,5 +1,6 @@
 <?php
 
+
 function redirect($location){
 
 
@@ -70,7 +71,6 @@ $_SESSION['message']= $msg;
 
 $msg = "";
 
-
     }
 
 
@@ -91,7 +91,6 @@ function display_message() {
 
 
 function users_online() {
-
 
 
     if(isset($_GET['onlineusers'])) {
@@ -371,7 +370,7 @@ function register_user($username, $email, $password){
 
 }
 
- function login_user($username, $password)
+function login_user($username, $password)
  {
 
      global $con;
@@ -431,9 +430,40 @@ function register_user($username, $email, $password){
 
  }
 
+function recordCount($table){
+
+    global $con;
+
+    $query = "SELECT * FROM ". $table;
+
+    $select_all_post = mysqli_query($con, $query);
+
+    $result = mysqli_num_rows($select_all_post);
+
+    testQuery($result);
+
+    return $result;
+}
 
 
+function checkStatus($table, $column, $status){
+    global $con;
 
+        $query = "SELECT * FROM $table WHERE $column = '$status' ";
 
+        $result = mysqli_query($con, $query);
+
+        return mysqli_num_rows($result);
+}
+
+function checkUserRole($table, $column, $role){
+    global $con;
+
+    $query = "SELECT * FROM $table WHERE $column = '$role' ";
+
+    $result = mysqli_query($con, $query);
+
+    return mysqli_num_rows($result);
+}
 
 

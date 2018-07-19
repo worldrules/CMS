@@ -47,15 +47,13 @@
 
 <?php
 //Seleciona a quantidade de postagens que tem no site--------------------------------------//
-
-$query = "SELECT * FROM posts";
-
-$select_all_post = mysqli_query($con, $query);
-$post_count = mysqli_num_rows($select_all_post);
-
-echo "<div class='huge'>{$post_count}</div>";
-
 ?>
+
+
+
+<div class='huge'><?php echo $post_count = recordCount('posts');?></div>
+
+
                                         <div>Posts</div>
                                     </div>
                                 </div>
@@ -80,13 +78,10 @@ echo "<div class='huge'>{$post_count}</div>";
 
 <?php
 //Seleciona a quantidade de comentarios que tem no site--------------------------------------//
-$query = "SELECT * FROM comments";
-
-$select_all_comments = mysqli_query($con, $query);
-$comment_count = mysqli_num_rows($select_all_comments);
-
-echo "<div class='huge'>{$comment_count}</div>"
 ?>
+
+<div class='huge'><?php echo $comment_count = recordCount('comments');?></div>
+
 
 
                                         <div>Comments</div>
@@ -114,13 +109,10 @@ echo "<div class='huge'>{$comment_count}</div>"
 
 <?php
 //Seleciona a quantidade de usuários que tem no site--------------------------------------//
-$query = "SELECT * FROM users";
-
-$select_all_users = mysqli_query($con, $query);
-$users_count = mysqli_num_rows($select_all_users);
-
-echo "<div class='huge'>{$users_count}</div>"
 ?>
+<div class='huge'><?php echo $users_count = recordCount('users');?></div>
+
+
 
                                         <div> Users</div>
                                     </div>
@@ -146,13 +138,11 @@ echo "<div class='huge'>{$users_count}</div>"
 
 <?php
 //Seleciona a quantidade de categorias que tem no site--------------------------------------//
-$query = "SELECT * FROM categories";
-
-$select_all_categories = mysqli_query($con, $query);
-$category_count = mysqli_num_rows($select_all_categories);
-
-echo "<div class='huge'>{$category_count}</div>"
 ?>
+
+<div class='huge'><?php echo $category_count = recordCount('categories');?></div>
+
+
 
                                         <div>Categories</div>
                                     </div>
@@ -172,41 +162,24 @@ echo "<div class='huge'>{$category_count}</div>"
 
                 <?php
 //seleciona só os posts published e conta numero de linhas--------------------------------------------------------------/
-                $query = "SELECT * FROM posts WHERE post_status = 'published' ";
 
-                $select_all_published_posts = mysqli_query($con, $query);
-                $post_published_count = mysqli_num_rows($select_all_published_posts);
+                $post_published_count = checkStatus('posts','post_status' ,'published');
 
 //seleciona só os posts drafts e conta numero de linhas--------------------------------------------------------------/
-                $query = "SELECT * FROM posts WHERE post_status = 'draft' ";
-
-                $select_all_draft_posts = mysqli_query($con, $query);
-                $post_draft_count = mysqli_num_rows($select_all_draft_posts);
-
-//seleciona só os posts drafts e conta numero de linhas--------------------------------------------------------------/
-                $query = "SELECT * FROM comments WHERE comment_status = 'unapproved' ";
 
 
-                $unapproved_comments_query = mysqli_query($con, $query);
-                $unapproved_comment_count = mysqli_num_rows($unapproved_comments_query);
-
+                $post_draft_count = checkStatus('posts','post_status' ,'draft');
 
 //seleciona só os posts drafts e conta numero de linhas--------------------------------------------------------------/
-                $query = "SELECT * FROM users WHERE user_role = 'Subscriber' ";
-
-                $select_all_subscribers = mysqli_query($con, $query);
-                $subscriber_count = mysqli_num_rows($select_all_subscribers);
 
 
+                $unapproved_comment_count = checkStatus('comments','comment_status' ,'unapproved');
+//seleciona só os usuarios subscribers e conta--------------------------------------------------------------/
+
+                $subscriber_count = checkUserRole('users','user_role' ,'Subscriber');
                 ?>
 
-
-
-
-
-
-
-
+<!--- Traz o chart da dashboard ---->
                 <div class="row">
 
                     <script type="text/javascript">
