@@ -1,22 +1,37 @@
+<?php include "includes/adm_header.php" ?>
+
 <?php
-/**
- * Created by PhpStorm.
- * User: Leonardo
- * Date: 06/05/2018
- * Time: 15:46
- */
+
+
+
+
+
+
+
+if(!is_admin($_SESSION['username'])){
+
+    header("Location: index.php");
+}
+
+
 ?>
 
 
 
-<?php include "includes/adm_header.php" ?>
+
+
+
 
 <div id="wrapper">
+
 
 
     <!-- Navigation -->
 
     <?php include "includes/adm_navigation.php" ?>
+
+
+
 
     <div id="page-wrapper">
 
@@ -27,38 +42,40 @@
                 <div class="col-lg-12">
 
                     <h1 class="page-header">
-                        CMS
-                        <small>Users</small>
+                        Welcome to admin
+                        <small>Author</small>
                     </h1>
+
 
                     <?php
 
-
-                    if(isset($_GET['source'])) {
+                    if(isset($_GET['source'])){
 
                         $source = $_GET['source'];
+
                     } else {
 
                         $source = '';
+
                     }
 
-                    switch ($source) {
+                    switch($source) {
 
                         case 'add_user';
+
                             include "includes/add_user.php";
+
                             break;
 
+
                         case 'edit_user';
+
                             include "includes/edit_user.php";
                             break;
 
-                        case '34';
-                            echo "NICE";
+                        case '200';
+                            echo "NICE 200";
                             break;
-                        case '34';
-                            echo "NICE";
-                            break;
-
 
                         default:
 
@@ -66,7 +83,17 @@
 
                             break;
 
+
+
+
                     }
+
+
+
+
+
+
+
 
                     ?>
 
@@ -74,17 +101,17 @@
 
 
 
+
                 </div>
             </div>
-
-
             <!-- /.row -->
+
         </div>
         <!-- /.container-fluid -->
 
     </div>
+
+
     <!-- /#page-wrapper -->
 
     <?php include "includes/adm_footer.php" ?>
-
-

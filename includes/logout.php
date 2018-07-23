@@ -5,7 +5,7 @@
  * Date: 15/05/2018
  * Time: 23:03
  */
-
+ob_start();
 session_start();
 ?>
 

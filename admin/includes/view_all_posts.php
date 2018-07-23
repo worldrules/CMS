@@ -123,27 +123,40 @@ if(isset($_POST['checkBoxArray'])) {
 
     <?php
 
-    $query = "SELECT * FROM posts ORDER BY post_id DESC "; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
+//    $query = "SELECT * FROM posts ORDER BY post_id DESC "; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
+
+//seleciona a table e a coluna separada por um ponto
+
+    $query = "SELECT posts.post_id, posts.post_author, posts.post_user, posts.post_title, posts.post_category_id, posts.post_status, posts.post_image, ";
+    $query .= "posts.posts_tags, posts.post_comment_count, posts.post_date, posts.post_views_count, categories.cat_id, categories.cat_title ";
+    $query .=" FROM posts";
+    $query .=" LEFT JOIN categories ON posts.post_category_id = categories.cat_id ORDER BY posts.post_id DESC";
+
     $select_posts = mysqli_query($con, $query);
 
+    // TESTAR AS COISAS É IMPORTANTE PARA CARALHO , TESTE TUDO FDP !!
+    testQuery($select_posts);
+
     while($row = mysqli_fetch_assoc($select_posts)) {
-        $post_id = $row['post_id'];
-        $post_author = $row['post_author'];
-        $post_user= $row['post_user'];
-        $post_title = $row['post_title'];
-        $post_category_id = $row['post_category_id'];
-        $post_status = $row['post_status'];
-        $post_image = $row['post_image'];
-        $posts_tags = $row['posts_tags'];
-        $post_comment_count = $row['post_comment_count'];
-        $post_date = $row['post_date'];
-        $post_views_count = $row['post_views_count'];
+    $post_id = $row['post_id'];
+    $post_author = $row['post_author'];
+    $post_user = $row['post_user'];
+    $post_title = $row['post_title'];
+    $post_category_id = $row['post_category_id'];
+    $post_status = $row['post_status'];
+    $post_image = $row['post_image'];
+    $posts_tags = $row['posts_tags'];
+    $post_comment_count = $row['post_comment_count'];
+    $post_date = $row['post_date'];
+    $post_views_count = $row['post_views_count'];
+    $cat_id = $row['cat_id'];
+    $cat_title = $row['cat_title'];
 
-        echo "<tr>";
+    echo "<tr>";
 
-        ?>
+    ?>
 
-        <td><input class='checkBoxes' type='checkbox' name="checkBoxArray[]" value='<?php echo $post_id ?>'></td>
+    <td><input class='checkBoxes' type='checkbox' name="checkBoxArray[]" value='<?php echo $post_id ?>'></td>
 
     <?php
 
@@ -175,16 +188,16 @@ if(isset($_POST['checkBoxArray'])) {
         echo "<td>{$post_title}</td>";
 
 
-            $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}  "; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
-            $select_categories_id = mysqli_query($con, $query);
-
-            while($row = mysqli_fetch_assoc($select_categories_id)) {
-            $cat_id = $row['cat_id'];
-            $cat_title = $row['cat_title'];
+//            $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}  "; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
+//            $select_categories_id = mysqli_query($con, $query);
+//
+//            while($row = mysqli_fetch_assoc($select_categories_id)) {
+//            $cat_id = $row['cat_id'];
+//            $cat_title = $row['cat_title'];
 
                 echo "<td>{$cat_title}</td>";
 
-            }
+//            }
 
         echo "<td>{$post_status}</td>";
         echo "<td><img width='100' src='../images/$post_image'alt='Image'></td>";

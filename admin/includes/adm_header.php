@@ -1,8 +1,11 @@
-<?php ob_start();
-include "../includes/db.php";
-include "functions.php";
+<?php ob_start(); ?>
+<?php require_once "../includes/db.php"; ?>
+<?php require_once "functions.php"; ?>
 
-session_start(); ?>
+
+
+<?php session_start(); ?>
+
 
 
 <?php
