@@ -1052,7 +1052,7 @@ if (typeof jQuery === 'undefined') {
 
   Modal.prototype.resize = function () {
     if (this.isShown) {
-      $(window).on('resize.bs.modal', $.proxy(this.handleUpdata, this))
+      $(window).on('resize.bs.modal', $.proxy(this.handleUpdate, this))
     } else {
       $(window).off('resize.bs.modal')
     }
@@ -1122,7 +1122,7 @@ if (typeof jQuery === 'undefined') {
 
   // these following methods are used to handle overflowing modals
 
-  Modal.prototype.handleUpdata = function () {
+  Modal.prototype.handleUpdate = function () {
     if (this.options.backdrop) this.adjustBackdrop()
     this.adjustDialog()
   }

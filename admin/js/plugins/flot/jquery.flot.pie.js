@@ -7,7 +7,7 @@ NOT need to be passed in as percentage values because it
 internally calculates the total and percentages.
 
 * Created by Brian Medendorp, June 2009
-* Updatad November 2009 with contributions from: btburnett3, Anthony Aragues and Xavi Ivars
+* Updated November 2009 with contributions from: btburnett3, Anthony Aragues and Xavi Ivars
 
 * Changes:
 	2009-10-22: lineJoin set to round

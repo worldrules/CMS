@@ -1084,7 +1084,7 @@ $(function() {
             tooltip: true,
             tooltipOpts: {
                 content: "%s for %x was %y",
-                xdataFormat: "%y-%0m-%0d",
+                xDateFormat: "%y-%0m-%0d",
 
                 onHover: function(flotItem, $tooltipEl) {
                     // console.log(flotItem, $tooltipEl);
@@ -1191,9 +1191,9 @@ $(function() {
         }
     });
 
-    // Updata the random dataset at 25FPS for a smoothly-animating chart
+    // Update the random dataset at 25FPS for a smoothly-animating chart
 
-    setInterval(function updataRandom() {
+    setInterval(function updateRandom() {
         series[0].data = getRandomData();
         plot.setData(series);
         plot.draw();
