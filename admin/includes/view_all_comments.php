@@ -27,6 +27,7 @@
     <tbody>
 
     <?php
+    //quase fiz merda
 
     $query = "SELECT * FROM comments "; // LIMIT 3 PODE COLOCAR LIMITE NA ROW
     $select_comments = mysqli_query($con, $query);

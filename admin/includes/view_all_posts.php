@@ -311,6 +311,7 @@ if(isset($_GET['reset'])) {
 }
 
 
+//quase fiz merda
 
 
 ?>
