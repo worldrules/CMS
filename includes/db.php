@@ -1,8 +1,8 @@
 <?php
 ob_start();
-$db['db_host'] = "mysql://bb4d3eb9810e2e:ca1732ea@us-cdbr-iron-east-04";
-$db['db_user'] = "bb4d3eb9810e2e";
-$db['db_pass'] = "ca1732ea";
+$db['db_host'] = "localhost";
+$db['db_user'] = "root";
+$db['db_pass'] = "";
 $db['db_name'] = "cms";
 
 

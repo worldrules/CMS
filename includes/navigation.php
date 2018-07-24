@@ -15,7 +15,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">CMS Front</a>
+                <a class="navbar-brand" href="/cmsheroku">CMS Front</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,7 +50,7 @@
         }
 
 
-        echo "<li class='$category_class'><a href='/cms/category.php?category={$cat_id}'>{$cat_title}</a></li>";
+        echo "<li class='$category_class'><a href='/cmsheroku/category/{$cat_id}'>{$cat_title}</a></li>";
 
 
     }
@@ -58,14 +58,14 @@
 ?>
 
                         <li>
-                        <a href="admin">Admin</a>
+                        <a href="/CMSHeroku/admin">Admin</a>
                         </li>
 
                         <li class="<?php echo $registration_class;?>">
-                            <a href="registration.php">Registration</a>
+                            <a href="/CMSHeroku/registration">Registration</a>
                         </li>
                     <li>
-                        <a href="contact.php">Contact</a>
+                        <a href="/CMSHeroku/contact">Contact</a>
                     </li>
 
 
@@ -79,7 +79,7 @@
 
                 $the_post_id = $_GET['p_id'];
 
-                echo "<li><a href='/cms/admin/posts.php?source=edit_post&p_id={$the_post_id}'>Edit Post</a></li>";
+                echo "<li><a href='/CMSHeroku/admin/posts.php?source=edit_post&p_id={$the_post_id}'>Edit Post</a></li>";
             }
         }
 
