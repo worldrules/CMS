@@ -303,7 +303,7 @@ function username_exists($username){
 
     $query = "SELECT username FROM users WHERE username = '$username'";
     $result = mysqli_query($con, $query);
-    confirmQuery($result);
+    testQuery($result);
 
     if(mysqli_num_rows($result) > 0) {
 
@@ -330,7 +330,7 @@ function email_exists($email){
 
     $query = "SELECT user_email FROM users WHERE user_email = '$email'";
     $result = mysqli_query($con, $query);
-    confirmQuery($result);
+    testQuery($result);
 
     if(mysqli_num_rows($result) > 0) {
 
@@ -347,26 +347,23 @@ function email_exists($email){
 }
 
 
-function register_user($username, $email, $password){
+function register_user($username, $email, $password) {
 
     global $con;
 
-        $username = mysqli_real_escape_string($con, $username);
-        $email    = mysqli_real_escape_string($con, $email);
-        $password = mysqli_real_escape_string($con, $password);
 
-        $password = password_hash( $password, PASSWORD_BCRYPT, array('cost' => 12));
-            
-            
-        $query = "INSERT INTO users (username, user_email, user_password, user_role) ";
-        $query .= "VALUES('{$username}','{$email}', '{$password}', 'subscriber' )";
-        $register_user_query = mysqli_query($con, $query);
+    $username = mysqli_real_escape_string($con, $username);
+    $email = mysqli_real_escape_string($con, $email);
+    $password = mysqli_real_escape_string($con, $password);
 
-        confirmQuery($register_user_query);
-
-        
+    $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
 
+    $query = "INSERT INTO users (username, user_email, user_password, user_role) ";
+    $query .= "VALUES('{$username}','{$email}', '{$password}', 'Subscriber' )";
+    $register_user_query = mysqli_query($con, $query);
+
+    testQuery($register_user_query);
 
 }
 
@@ -375,11 +372,11 @@ function login_user($username, $password)
 
      global $con;
 
-     $username = trim($username);
-     $password = trim($password);
+         $username = trim($username);
+         $password = trim($password);
 
-     $username = mysqli_real_escape_string($con, $username);
-     $password = mysqli_real_escape_string($con, $password);
+         $username = mysqli_real_escape_string($con, $username);
+         $password = mysqli_real_escape_string($con, $password);
 
 
      $query = "SELECT * FROM users WHERE username = '{$username}' ";
@@ -400,28 +397,26 @@ function login_user($username, $password)
          $db_user_lastname = $row['user_lastname'];
          $db_user_role = $row['user_role'];
 
+     if (password_verify($password,$db_user_password)) {
 
-         if (password_verify($password,$db_user_password)) {
-
-             $_SESSION['username'] = $db_username;
-             $_SESSION['firstname'] = $db_user_firstname;
-             $_SESSION['lastname'] = $db_user_lastname;
-             $_SESSION['user_role'] = $db_user_role;
-
+         $_SESSION['username'] = $db_username;
+         $_SESSION['firstname'] = $db_user_firstname;
+         $_SESSION['lastname'] = $db_user_lastname;
+         $_SESSION['user_role'] = $db_user_role;
 
 
-             redirect("/cms/admin");
+
+         redirect("/cms/admin");
 
 
          } else {
 
 
-             return false;
+         redirect("/cms/index.php");
 
 
 
          }
-
 
 
      }

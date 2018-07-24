@@ -38,17 +38,26 @@
         // UPDATE QUERY
 
         if(isset($_POST['update_category'])) {
-            $the_cat_title = $_POST['cat_title'];
-            $query = "UPDATE categories SET cat_title = '{$the_cat_title}'  WHERE cat_id = {$cat_id} ";
-            $update_query = mysqli_query($con, $query);
-            header("Location: categories.php");
-            if(!$update_query) {
 
-                die('Query Failed' . mysqli_error($con));
+            $the_cat_title = escape($_POST['cat_title']);
+
+            $stmt = mysqli_prepare($con, "UPDATE categories SET cat_title = ? WHERE cat_id = ? ");
+
+            mysqli_stmt_bind_param($stmt, 'si', $the_cat_title, $cat_id);
+
+            mysqli_stmt_execute($stmt);
 
 
-            }
+          if(!$stmt){
 
+                          die("QUERY FAILED" . mysqli_error($con));
+
+                      }
+
+                      mysqli_stmt_close($stmt);
+
+
+                     redirect("categories.php");
 
 
         }

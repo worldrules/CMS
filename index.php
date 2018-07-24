@@ -30,7 +30,7 @@
                 
                   <?php
 
-        $per_page = 5;
+        $per_page = 3;
 
         if(isset($_GET['page'])) {
 
@@ -101,7 +101,8 @@
                 $post_user = $row['post_user'];
                 $post_date= $row['post_date'];
                 $post_image = $row['post_image'];
-                $post_content = substr($row['post_content'], 0,100);
+                $post_content = substr($row['post_content'], 0,300);
+
                 $post_status = $row['post_status'];
 
                 if($post_status == 'published'){
