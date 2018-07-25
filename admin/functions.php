@@ -406,14 +406,14 @@ function login_user($username, $password)
 
 
 
-         redirect("/cms/admin");
+         redirect("/cmsheroku/admin");
 
 
          } else {
 
 
-         redirect("/cms/index.php");
-
+//         redirect("/cmsheroku/index.php");
+            return false;
 
 
          }

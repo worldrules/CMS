@@ -54,7 +54,7 @@
                              <textarea class="form-control" name="body" id="body" cols="30" rows="10"></textarea>
                         </div>
                 
-                        <input type="submit" name="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Submit">
+                        <input type="submit" name="submit" id="btn-login" class="btn btn-primary btn-lg btn-block" value="Submit">
                     </form>
                  
                 </div>

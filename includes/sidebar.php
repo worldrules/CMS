@@ -1,4 +1,38 @@
-        <!-- Blog Sidebar Widgets Column -->               
+<?php
+
+        checkIfUserIsLoggedInAndRedirect('cmsheroku/admin');
+
+        if(ifItIsMethod('post')) {
+
+            if(isset($_POST['username']) && isset($_POST['password'])){
+
+
+
+
+                login_user($_POST['username'], $_POST['password']);
+
+
+            } else {
+
+
+                redirect('/cmsheroku/index.php');
+
+            }
+
+
+
+        }
+
+
+
+
+?>
+
+
+
+
+
+        <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">
 
 
@@ -32,7 +66,7 @@
                 <?php else:?>
 
                 <h4>Login</h4>
-                    <form action="includes/login.php" method="post">
+                    <form action="" method="post">
                         <div class="form-group">
                             <input name="username" type="text" class="form-control" placeholder="Enter Username">
                             <span class="input-group-btn">

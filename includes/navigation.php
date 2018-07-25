@@ -1,6 +1,7 @@
   <?php require_once "db.php";
+  require_once "admin/functions.php"; ?>
 
-  ?>
+
 
 
 
@@ -57,13 +58,32 @@
       
 ?>
 
+                    <?php if(isLoggedIn()):  ?>
+
                         <li>
-                        <a href="/CMSHeroku/admin">Admin</a>
+                            <a href="/CMSHeroku/admin">Admin</a>
+                        </li>
+                        <li>
+                            <a href="/CMSHeroku/includes/logout.php">Admin</a>
                         </li>
 
-                        <li class="<?php echo $registration_class;?>">
-                            <a href="/CMSHeroku/registration">Registration</a>
+                    <?php else: ?>
+
+                        <li>
+                            <a href="/CMSHeroku/login.php">Login</a>
                         </li>
+
+
+                    <?php endif; ?>
+
+
+
+
+
+                    <li class="<?php echo $registration_class;?>">
+                        <a href="/CMSHeroku/registration">Registration</a>
+                    </li>
+
                     <li>
                         <a href="/CMSHeroku/contact">Contact</a>
                     </li>

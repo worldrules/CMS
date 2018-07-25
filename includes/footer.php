@@ -1,4 +1,4 @@
-              <p>Copyright &copy; Your Website 2014</p>
+              <p>Desenvolvido &copy; por WorldRulesDev 2018</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

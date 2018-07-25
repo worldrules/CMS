@@ -7,6 +7,8 @@
  */
 ob_start();
 session_start();
+include "../admin/functions.php"; ?>
+
 ?>
 
 <?php
@@ -16,7 +18,7 @@ echo $_SESSION['lastname'] = null;
 echo $_SESSION['user_role'] = null;
 
 
-header("Location:../index.php");
+redirect('/cmsheroku/index')
 
 
 
