@@ -78,6 +78,8 @@
                                 <button class="btn btn-primary" name="login" type="submit">Submit</button>
 
                             </div>
+                        <div class="form-group"></div>
+                        <a href="forgot.php?forgot=<?php echo uniqid(true); ?>">Forgot Password</a>
                         </form><!-- Search Form -->
                         <!-- /.input-group -->
                     </div>

@@ -1,0 +1,27 @@
+{
+  "name": "vendor_name/package_name",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "World Rules Dev",
+      "email": "worldrulesdev@gmail.com"
+    }],
+
+    "autoload": {
+
+      "classmap": [
+
+        "classes"
+
+      ]
+
+    },
+
+  "require": {
+    "phpmailer/phpmailer": "6.0.x-dev",
+    "pusher/pusher-php-server": "^3.0",
+    "vlucas/phpdotenv": "^2.4"
+  }
+}

@@ -1,5 +1,134 @@
 <?php  include "includes/db.php"; ?>
 <?php  include "includes/header.php"; ?>
+<?php require_once "admin/functions.php"; ?>
+
+
+
+<?php
+
+require './vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+//require 'classes/config.php';K
+
+require_once 'vendor/autoload.php';
+
+
+
+
+
+        if(!ifItIsMethod('get') && !isset($_GET['forgot'])) {
+
+
+
+            redirect('/cmsheroku/index');
+
+
+
+
+
+        }
+
+        if(ifItIsMethod('post')) {
+
+
+            if (isset($_POST['email'])) {
+
+
+                $email = $_POST['email'];
+
+                $lenght = 50;
+
+                $token = bin2hex(openssl_random_pseudo_bytes($lenght));
+
+
+                if (email_exists($email)) {
+
+
+                    if($stmt = mysqli_prepare($con, "UPDATE users SET token='{$token}' WHERE user_email= ?")){
+
+                        mysqli_stmt_bind_param($stmt, "s", $email);
+                        mysqli_stmt_execute($stmt);
+                        mysqli_stmt_close($stmt);
+
+
+                        /*
+                         *
+                         * Configure PHPMailer
+                         *
+                         *
+                         */
+
+                        $mail = new PHPMailer();
+
+                        echo get_class($mail);
+
+                        $mail->isSMTP();                                     // Set mailer to use SMTP
+                        $mail->Host = Config::SMTP_HOST;                     // Specify main and backup SMTP servers
+                        $mail->Username = Config::SMTP_USER;                 // SMTP username
+                        $mail->Password = Config::SMTP_PASSWORD;             // SMTP password
+                        $mail->Port = Config::SMTP_PORT;                     // TCP port to connect to
+                        $mail->SMTPSecure = 'tls';                           // Enable TLS encryption, `ssl` also accepted
+                        $mail->SMTPAuth = true;
+                        $mail->isHTML(true);
+                        $mail->CharSet = 'UTF-8';
+
+                        $mail->setFrom('worldrulesdev@gmail.com', 'Leonardo Carvalho');
+                        $mail->addAddress($email);
+
+                        $mail->Subject = 'This is a test email';
+
+                        $mail->Body = 'Email Body';
+
+                        if($mail->send()){
+
+
+                            echo "IT wast sent";
+
+
+
+                        } else {
+
+                            echo "NOT SEND";
+
+
+
+                        }
+
+
+
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Page Content -->
