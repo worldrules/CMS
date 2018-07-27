@@ -15,7 +15,7 @@ require_once 'vendor/autoload.php';
 
 
 
-        if(!ifItIsMethod('get') && !isset($_GET['forgot'])) {
+        if(!isset($_GET['forgot'])) {
 
 
 
@@ -59,7 +59,7 @@ require_once 'vendor/autoload.php';
 
                         $mail = new PHPMailer();
 
-                        echo get_class($mail);
+//                        echo get_class($mail);
 
                         $mail->isSMTP();                                     // Set mailer to use SMTP
                         $mail->Host = Config::SMTP_HOST;                     // Specify main and backup SMTP servers
@@ -76,13 +76,14 @@ require_once 'vendor/autoload.php';
 
                         $mail->Subject = 'This is a test email';
 
-                        $mail->Body = 'Email Body';
+                        $mail->Body = '<p>Please click to reset your password
+
+ <a href="http://localhost:80/cmsheroku/reset.php?email='.$email.'&token='.$token.' ">http://localhost:80/cmsheroku/reset.php?email='.$email.'&token='.$token.'</a></p>';
+
 
                         if($mail->send()){
 
-
-                            echo "IT wast sent";
-
+                            $emailSent = true;
 
 
                         } else {
@@ -142,6 +143,13 @@ require_once 'vendor/autoload.php';
                     <div class="panel-body">
                         <div class="text-center">
 
+                            <?php
+
+                            if(!isset($emailSent)):
+
+
+
+                            ?>
 
                                 <h3><i class="fa fa-lock fa-4x"></i></h3>
                                 <h2 class="text-center">Forgot Password?</h2>
@@ -167,6 +175,13 @@ require_once 'vendor/autoload.php';
                                     </form>
 
                                 </div><!-- Body-->
+
+                            <?php else: ?>
+
+                                <h2>Please check your email</h2>
+
+                            <?php endif; ?>
+
 
                         </div>
                     </div>

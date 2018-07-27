@@ -64,7 +64,7 @@
                             <a href="/CMSHeroku/admin">Admin</a>
                         </li>
                         <li>
-                            <a href="/CMSHeroku/includes/logout.php">Admin</a>
+                            <a href="/CMSHeroku/includes/logout.php">Logout</a>
                         </li>
 
                     <?php else: ?>
