@@ -62,7 +62,7 @@
                 <?php if(isset($_SESSION['user_role'])):?>
 
                 <h4>Logged in as <?php echo $_SESSION['username']?></h4>
-                    <a href="/cmsheroku/includes/logout.php" class="btn btn-primary">Logout</a>
+                    <a href="/logout.php" class="btn btn-primary">Logout</a>
 
 
                 <?php else:?>
@@ -114,7 +114,7 @@
         $cat_title = $row['cat_title'];
         $cat_id = $row['cat_id'];
 
-        echo "<li><a href='/CMSHeroku/category/$cat_id'>{$cat_title}</a></li>";
+        echo "<li><a href='/category/$cat_id'>{$cat_title}</a></li>";
 
         }
                                     ?>

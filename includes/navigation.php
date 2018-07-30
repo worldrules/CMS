@@ -16,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/cmsheroku/index">CMS Front</a>
+                <a class="navbar-brand" href="/index">CMS Front</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -51,7 +51,7 @@
         }
 
 
-        echo "<li class='$category_class'><a href='/cmsheroku/category/{$cat_id}'>{$cat_title}</a></li>";
+        echo "<li class='$category_class'><a href='/category/{$cat_id}'>{$cat_title}</a></li>";
 
 
     }
@@ -61,16 +61,16 @@
                     <?php if(isLoggedIn()):  ?>
 
                         <li>
-                            <a href="/CMSHeroku/admin">Admin</a>
+                            <a href="/admin">Admin</a>
                         </li>
                         <li>
-                            <a href="/CMSHeroku/includes/logout.php">Logout</a>
+                            <a href="/logout.php">Logout</a>
                         </li>
 
                     <?php else: ?>
 
                         <li>
-                            <a href="/CMSHeroku/login.php">Login</a>
+                            <a href="/login.php">Login</a>
                         </li>
 
 
