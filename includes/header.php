@@ -13,13 +13,13 @@ session_start();
     <meta name="author" content="">
 
     <title>CMS</title>
-
+K
     <!-- Bootstrap Core CSS -->
-    <link href="/CMSHeroku/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/CMSHeroku/css/blog-home.css" rel="stylesheet">
-    <link href="/CMSHeroku/css/styles.css" rel="stylesheet">
+    <link href="/css/blog-home.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
