@@ -18,7 +18,7 @@ echo $_SESSION['lastname'] = null;
 echo $_SESSION['user_role'] = null;
 
 
-redirect('/cmsheroku/index')
+redirect('/index')
 
 
 
