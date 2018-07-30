@@ -32,7 +32,7 @@
         $cat_id = $row['cat_id'];
 
         $category_class = '';
-        $registration_class = '';
+        $registration_class = 'active';
 
         $pageName = basename($_SERVER['PHP_SELF']);
 
