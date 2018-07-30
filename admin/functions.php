@@ -1,6 +1,61 @@
 <?php
 
 
+
+function loggedInUserId() {
+
+
+    if(isLoggedIn()) {
+
+        $result = query("SELECT * FROM users WHERE username='" . $_SESSION['username'] . "'");
+        testQuery($result);
+        $user = mysqli_fetch_array($result);
+        return mysqli_num_rows($result) >= 1 ? $user['user_id'] : false;
+
+    }
+            return false;
+
+}
+
+function query($query) {
+    global $con;
+
+    return mysqli_query($con, $query);
+
+
+}
+
+function userLikedThisPost($the_post_id = ''){
+
+
+    $result = query("SELECT * FROM likes WHERE user_id=" . loggedInUserId() . " AND post_id={$the_post_id}");
+    testQuery($result);
+    return mysqli_num_rows($result) >= 1 ? true : false;
+
+}
+
+
+
+
+
+
+function imagePlaceholder($image='') {
+
+    if(!$image) {
+
+        return 'image3.jpg';
+
+    } else {
+
+        return $image;
+    }
+
+
+}
+
+
+
+
 function redirect($location){
 
 
@@ -397,6 +452,7 @@ function login_user($username, $password)
          $db_user_lastname = $row['user_lastname'];
          $db_user_role = $row['user_role'];
 
+
      if (password_verify($password,$db_user_password)) {
 
          $_SESSION['username'] = $db_username;
@@ -421,8 +477,8 @@ function login_user($username, $password)
 
      }
 
-     return true;
 
+     return true;
  }
 
 function recordCount($table){

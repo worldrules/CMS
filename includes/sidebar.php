@@ -1,6 +1,6 @@
 <?php
 
-        checkIfUserIsLoggedInAndRedirect('cmsheroku/admin');
+//        checkIfUserIsLoggedInAndRedirect('cmsheroku/admin');
 
 
 

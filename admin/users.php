@@ -1,20 +1,6 @@
 <?php include "includes/adm_header.php" ?>
 
-<?php
 
-
-
-
-
-
-
-if(!is_admin($_SESSION['username'])){
-
-    header("Location: index.php");
-}
-
-
-?>
 
 
 

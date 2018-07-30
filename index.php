@@ -8,8 +8,6 @@
 
 
 
-
-
     <!-- Navigation -->
 
 
@@ -124,7 +122,7 @@
                 <hr>
 
                 <a href="post.php?p_id=<?php echo $post_id ?>">
-                <img width="500" class="img-responsive" src="images/<?php echo $post_image ?> " alt="">
+                <img width="500" class="img-responsive" src="images/<?php echo imagePlaceholder($post_image); ?> " alt="">
                 </a>
                     <hr>
                 <p><?php echo $post_content?></p>

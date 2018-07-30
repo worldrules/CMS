@@ -12,6 +12,100 @@
 
 
 
+<?php
+
+if(isset($_POST['liked'])) {
+
+
+
+
+    $user_id = $_POST['user_id'];
+    //1  SELECT POST
+
+    $query = "SELECT * FROM posts WHERE post_id=$the_post_id";
+    $postResult = mysqli_query($con,$query);
+    $post = mysqli_fetch_array($postResult);
+    $likes = $post['likes'];
+
+
+    //2  UPDATE POST WITH LIKES
+
+    mysqli_query($con, "UPDATE posts SET likes=$likes+1 WHERE post_id=$the_post_id");
+
+    //3 CREATE LIKES FOR POSTS
+
+    mysqli_query($con, "INSERT INTO likes(user_id, post_id) VALUES($user_id, $the_post_id)");
+    exit();
+
+
+
+
+}
+
+if(isset($_POST['unliked'])) {
+
+    //1 =  FETCHING THE RIGHT POST
+
+    $user_id = $_POST['user_id'];
+
+    $query = "SELECT * FROM posts WHERE post_id=$the_post_id";
+    $postResult = mysqli_query($con, $query);
+    $post = mysqli_fetch_array($postResult);
+    $likes = $post['likes'];
+
+    //2 = DELETE LIKES
+
+    mysqli_query($con, "DELETE FROM likes WHERE post_id=$the_post_id AND user_id=$user_id");
+
+
+    //3 = UPDATE WITH DECREMENTING WITH LIKES
+
+    mysqli_query($con, "UPDATE posts SET likes=$likes-1 WHERE post_id=$the_post_id");
+
+    exit();
+
+
+
+
+
+
+
+
+
+//    $user_id = $_POST['user_id'];
+//    //1  SELECT POST
+//
+//    $query = "SELECT * FROM posts WHERE post_id=$the_post_id";
+//    $postResult = mysqli_query($con,$query);
+//    $post = mysqli_fetch_array($postResult);
+//    $likes = $post['likes'];
+//
+//
+//    //2  UPDATE POST WITH LIKES
+//
+//    mysqli_query($con, "UPDATE posts SET likes=$likes+1 WHERE post_id=$the_post_id");
+//
+//    //3 CREATE LIKES FOR POSTS
+//
+//    mysqli_query($con, "INSERT INTO likes(user_id, post_id) VALUES($user_id, $the_post_id)");
+//    exit();
+
+
+
+
+}
+
+
+
+
+?>
+
+
+
+
+
+
+
 <!-- Page Content -->
 <div class="container">
 
@@ -83,12 +177,23 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date ?></p>
                 <hr>
-                <img class="img-responsive" src="/cmsheroku/images/<?php echo $post_image ?> " alt="">
+                <img class="img-responsive" src="/cmsheroku/images/<?php echo imagePlaceholder($post_image); ?> " alt="">
                 <hr>
                 <p><?php echo $post_content?></p>
 
                 <hr>
 
+                <div class="row">
+                    <p><a class="pull-right"><a class="<?php echo userLikedThisPost($the_post_id) ? 'Unlike': 'Like';?>" href="#"><span class="glyphicon glyphicon-thumbs-up" ></span> Like</a></p>
+                </div>
+                <div class="row">
+                    <p><a class="pull-right"><a class="unlike" href="#"><span class="glyphicon glyphicon-thumbs-down" ></span> Unlike</a></p>
+                </div>
+                <div class="row">
+                    <p class="pull-right">Like: 10</p>
+                </div>
+
+                <div class="clearfix"></div>
 
 
 
@@ -256,3 +361,68 @@
 
 
                 <?php include "includes/footer.php"; ?>
+
+
+                <script>
+
+                    // Like Button
+
+                    $(document).ready(function () {
+
+                        var post_id = <?php echo $the_post_id;?>
+
+                        var user_id = 31;
+
+
+                        $('.like').click(function () {
+
+                            $.ajax({
+
+
+                                url: "/cmsheroku/post.php?p_id=<?php echo $the_post_id; ?>",
+                                type: 'post',
+                                data: {
+                                    'liked': 1,
+                                    'post_it': post_id,
+                                    'user_id': user_id
+
+
+
+                                }
+
+
+                            })
+
+
+                            
+                        });
+
+                        // Unlike Button
+
+                        $('.unlike').click(function () {
+
+                            $.ajax({
+
+
+                                url: "/cmsheroku/post.php?p_id=<?php echo $the_post_id; ?>",
+                                type: 'post',
+                                data: {
+                                    'unliked': 1,
+                                    'post_it': post_id,
+                                    'user_id': user_id
+
+
+
+                                }
+
+
+                            })
+
+
+
+                        });
+
+
+                    })
+
+                </script>

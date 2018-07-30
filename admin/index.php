@@ -1,4 +1,7 @@
-<?php include "includes/adm_header.php" ?>
+<?php include "includes/adm_header.php";
+
+require '../vendor/autoload.php';
+?>
     <div id="wrapper">
 
 
@@ -239,3 +242,44 @@
         <!-- /#page-wrapper -->
 
         <?php include "includes/adm_footer.php" ?>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+
+
+            <script>
+
+                $(document).ready(function () {
+
+
+                   var pusher = new Pusher('a00a51053b27d20e14ed', {
+                       cluster: 'us2',
+                       encrypted: true
+                   });
+
+                    var notificationChannel = pusher.subscribe('notifications');
+
+                    notificationChannel.bind('new_user', function (notification) {
+
+                        var message = notification.message;
+
+                        toastr.success(`${message} new user registered !`);
+
+                        console.log(message);
+
+                    })
+
+                })
+
+            </script>
+
+
+
+
+
+
+
+
+
+
