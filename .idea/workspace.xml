@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4c146f7-9b9d-4849-9248-053206b23b0d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/functions.php" afterPath="$PROJECT_DIR$/admin/functions.php" />
-      <change beforePath="$PROJECT_DIR$/includes/sidebar.php" afterPath="$PROJECT_DIR$/includes/sidebar.php" />
-      <change beforePath="$PROJECT_DIR$/post.php" afterPath="$PROJECT_DIR$/post.php" />
+      <change beforePath="$PROJECT_DIR$/includes/navigation.php" afterPath="$PROJECT_DIR$/includes/navigation.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,102 +52,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/functions.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+            <state relative-caret-position="338">
+              <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
               <folding>
-                <element signature="n#getPostlikes#0;n#!!top" expanded="false" />
-                <element signature="n#query#0;n#!!top" expanded="false" />
-                <element signature="n#imagePlaceholder#0;n#!!top" expanded="false" />
-                <element signature="e#872#959#0#PHP" expanded="false" />
-                <element signature="e#923#959#0#PHP" expanded="false" />
-                <element signature="n#redirect#0;n#!!top" expanded="false" />
-                <element signature="n#ifItIsMethod#0;n#!!top" expanded="false" />
-                <element signature="e#1094#1177#0#PHP" expanded="false" />
-                <element signature="n#isLoggedIn#0;n#!!top" expanded="false" />
-                <element signature="e#1229#1293#0#PHP" expanded="false" />
-                <element signature="n#checkIfUserIsLoggedInAndRedirect#0;n#!!top" expanded="false" />
-                <element signature="e#1389#1451#0#PHP" expanded="false" />
-                <element signature="n#escape#0;n#!!top" expanded="false" />
-                <element signature="n#set_message#0;n#!!top" expanded="false" />
-                <element signature="e#1593#1662#0#PHP" expanded="false" />
-                <element signature="e#1637#1662#0#PHP" expanded="false" />
-                <element signature="n#display_message#0;n#!!top" expanded="false" />
-                <element signature="e#1703#1814#0#PHP" expanded="false" />
-                <element signature="n#users_online#0;n#!!top" expanded="false" />
-                <element signature="e#1855#2864#0#PHP" expanded="false" />
-                <element signature="e#1912#2852#0#PHP" expanded="false" />
-                <element signature="e#2320#2672#0#PHP" expanded="false" />
-                <element signature="e#2548#2672#0#PHP" expanded="false" />
-                <element signature="n#testQuery#0;n#!!top" expanded="false" />
-                <element signature="e#3042#3145#0#PHP" expanded="false" />
-                <element signature="n#insert_categories#0;n#!!top" expanded="false" />
-                <element signature="e#3218#3792#0#PHP" expanded="false" />
-                <element signature="e#3303#3725#0#PHP" expanded="false" />
-                <element signature="e#3419#3725#0#PHP" expanded="false" />
-                <element signature="e#3609#3699#0#PHP" expanded="false" />
-                <element signature="n#findAllCategories#0;n#!!top" expanded="false" />
-                <element signature="e#3943#4322#0#PHP" expanded="false" />
-                <element signature="n#deleteCategories#0;n#!!top" expanded="false" />
-                <element signature="e#4376#4602#0#PHP" expanded="false" />
-                <element signature="n#UnApprove#0;n#!!top" expanded="false" />
-                <element signature="e#4658#4955#0#PHP" expanded="false" />
-                <element signature="n#is_admin#0;n#!!top" expanded="false" />
-                <element signature="e#5214#5312#0#PHP" expanded="false" />
-                <element signature="e#5276#5312#0#PHP" expanded="false" />
-                <element signature="n#username_exists#0;n#!!top" expanded="false" />
-                <element signature="e#5518#5618#0#PHP" expanded="false" />
-                <element signature="e#5582#5618#0#PHP" expanded="false" />
-                <element signature="n#email_exists#0;n#!!top" expanded="false" />
-                <element signature="e#5824#5924#0#PHP" expanded="false" />
-                <element signature="e#5888#5924#0#PHP" expanded="false" />
-                <element signature="n#register_user#0;n#!!top" expanded="false" />
-                <element signature="n#login_user#0;n#!!top" expanded="false" />
-                <element signature="e#6927#7013#0#PHP" expanded="false" />
-                <element signature="e#7021#7780#0#PHP" expanded="false" />
-                <element signature="e#7369#7771#0#PHP" expanded="false" />
-                <element signature="e#7679#7771#0#PHP" expanded="false" />
-                <element signature="n#recordCount#0;n#!!top" expanded="false" />
-                <element signature="n#checkStatus#0;n#!!top" expanded="false" />
-                <element signature="n#checkUserRole#0;n#!!top" expanded="false" />
-                <marker date="1532977489074" expanded="true" signature="252:318" ph="SELECT * FRO... users" />
-                <marker date="1532977489074" expanded="true" signature="653:724" ph="SELECT * FRO... likes" />
+                <marker date="1532967844068" expanded="true" signature="846:865" ph="SELECT * FRO... posts" />
+                <marker date="1532967844068" expanded="true" signature="942:993" ph="SELECT * FRO... posts" />
+                <marker date="1532967844068" expanded="true" signature="1337:1394" ph="SELECT * FRO... posts" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post.php">
+      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/navigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="161" column="31" lean-forward="false" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="31" />
+            <state relative-caret-position="628">
+              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
-                <marker date="1532980358350" expanded="true" signature="344:378" ph="SELECT * FRO... posts" />
-                <marker date="1532980358350" expanded="true" signature="579:625" ph="UPDATE posts... " />
-                <marker date="1532980358350" expanded="true" signature="696:758" ph="INSERT INTO likes... " />
-                <marker date="1532980358350" expanded="true" signature="934:968" ph="SELECT * FRO... posts" />
-                <marker date="1532980358350" expanded="true" signature="1148:1201" ph="DELETE FROM likes... " />
-                <marker date="1532980358350" expanded="true" signature="1286:1332" ph="UPDATE posts... " />
-                <marker date="1532980358350" expanded="true" signature="1676:1750" ph="UPDATE posts... " />
-                <marker date="1532980358350" expanded="true" signature="2265:2359" ph="SELECT post_... posts" />
-                <marker date="1532980358350" expanded="true" signature="2442:2556" ph="SELECT post_... posts" />
-                <marker date="1532980358350" expanded="true" signature="6257:6372" ph="INSERT INTO comments... " />
-                <marker date="1532980358350" expanded="true" signature="8047:8094" ph="SELECT * FRO... comments" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
-              <folding>
-                <marker date="1532980831598" expanded="true" signature="2709:2733" ph="SELECT * FRO... categories" />
+                <marker date="1532982158641" expanded="true" signature="1066:1090" ph="SELECT * FRO... categories" />
               </folding>
             </state>
           </provider>
@@ -272,7 +195,6 @@
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/registration.php" />
-        <option value="$PROJECT_DIR$/includes/navigation.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/admin/includes/adm_navigation.php" />
@@ -284,6 +206,7 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/post.php" />
         <option value="$PROJECT_DIR$/includes/sidebar.php" />
+        <option value="$PROJECT_DIR$/includes/navigation.php" />
       </list>
     </option>
   </component>
@@ -355,11 +278,6 @@
               <item name="CMSHeroku" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMSHeroku" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="CMSHeroku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMSHeroku" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -377,7 +295,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Database Driver&#10;DDL Data Source" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="MySQL" />
-    <property name="SearchEverywhereHistoryKey" value="sideb&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;navi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;post&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/post.php&#10;nav&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;INDEX&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;fun&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;comments&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/comments.php&#10;funct&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;sidebar&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;f&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;adm&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/adm_navigation.php&#10;login&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/login.php&#10;na&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;footer&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;GITIG&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/vendor/psr/log/.gitignore&#10;vie&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/view_all_posts.php&#10;nav i&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registra&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;searc&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/search.php&#10;naviga&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registrat&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;side&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;sid&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;db&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/db.php&#10;logo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/logout.php&#10;contac&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/contact.php&#10;foo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;functi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/header.php&#10;catego&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/category.php&#10;update&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/update_categories.php&#10;posts&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/posts.php&#10;view&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/view_all_posts.php&#10;registrati&#9;FILE&#9;file://C:/xampp/htdocs/CMS/registration.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/add_user.php&#10;users&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/users.php&#10;func&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/functions.php&#10;inde&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/index.php&#10;edit&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/edit_post.php&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/CMS/search.php&#10;post\&#9;FILE&#9;file://C:/xampp/htdocs/CMS/post.php&#10;scrip&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/js/scripts.js&#10;autho&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;aut&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;author&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;comment&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/comments.php&#10;profile&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/profile.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/CMS/registration.php" />
+    <property name="SearchEverywhereHistoryKey" value="regis&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;login&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/login.php&#10;sideb&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;navi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;post&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/post.php&#10;nav&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;INDEX&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;fun&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;comments&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/comments.php&#10;funct&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;sidebar&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;f&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;adm&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/adm_navigation.php&#10;na&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;footer&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;GITIG&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/vendor/psr/log/.gitignore&#10;vie&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/view_all_posts.php&#10;nav i&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registra&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;searc&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/search.php&#10;naviga&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registrat&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;side&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;sid&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;db&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/db.php&#10;logo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/logout.php&#10;contac&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/contact.php&#10;foo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;functi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/header.php&#10;catego&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/category.php&#10;update&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/update_categories.php&#10;posts&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/posts.php&#10;view&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/view_all_posts.php&#10;registrati&#9;FILE&#9;file://C:/xampp/htdocs/CMS/registration.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/add_user.php&#10;users&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/users.php&#10;func&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/functions.php&#10;inde&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/index.php&#10;edit&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/edit_post.php&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/CMS/search.php&#10;post\&#9;FILE&#9;file://C:/xampp/htdocs/CMS/post.php&#10;scrip&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/js/scripts.js&#10;autho&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;aut&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;author&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;comment&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/comments.php&#10;profile&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/profile.php" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="PHP&#10;OracleSqlPlus" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -521,7 +439,7 @@
       <workItem from="1532808856491" duration="735000" />
       <workItem from="1532876597716" duration="18778000" />
       <workItem from="1532964602938" duration="6130000" />
-      <workItem from="1532970989264" duration="4416000" />
+      <workItem from="1532970989264" duration="5324000" />
     </task>
     <task id="LOCAL-00001" summary="Testando ferramenta">
       <created>1524007106895</created>
@@ -740,11 +658,25 @@
       <option name="project" value="LOCAL" />
       <updated>1532932027152</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Projeto Concluído ! &lt;3">
+      <created>1532981293540</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1532981293540</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Projeto Concluído ! &lt;3">
+      <created>1532981482122</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1532981482122</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404681000" />
+    <option name="totallyTimeSpent" value="405589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,7 +766,8 @@
     <MESSAGE value="Reset.php e mais alteracoes forgot e sidebar" />
     <MESSAGE value="Esqueci do autoload" />
     <MESSAGE value="Ta chegando ao fim;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ta chegando ao fim;" />
+    <MESSAGE value="Projeto Concluído ! &lt;3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projeto Concluído ! &lt;3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,29 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="63" lean-forward="true" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1192">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -1213,14 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -1229,13 +1131,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="161" column="31" lean-forward="false" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="31" />
+          <folding>
+            <marker date="1532980358350" expanded="true" signature="344:378" ph="SELECT * FRO... posts" />
+            <marker date="1532980358350" expanded="true" signature="579:625" ph="UPDATE posts... " />
+            <marker date="1532980358350" expanded="true" signature="696:758" ph="INSERT INTO likes... " />
+            <marker date="1532980358350" expanded="true" signature="934:968" ph="SELECT * FRO... posts" />
+            <marker date="1532980358350" expanded="true" signature="1148:1201" ph="DELETE FROM likes... " />
+            <marker date="1532980358350" expanded="true" signature="1286:1332" ph="UPDATE posts... " />
+            <marker date="1532980358350" expanded="true" signature="1676:1750" ph="UPDATE posts... " />
+            <marker date="1532980358350" expanded="true" signature="2265:2359" ph="SELECT post_... posts" />
+            <marker date="1532980358350" expanded="true" signature="2442:2556" ph="SELECT post_... posts" />
+            <marker date="1532980358350" expanded="true" signature="6257:6372" ph="INSERT INTO comments... " />
+            <marker date="1532980358350" expanded="true" signature="8047:8094" ph="SELECT * FRO... comments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+          <folding>
+            <marker date="1532980831598" expanded="true" signature="2709:2733" ph="SELECT * FRO... categories" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="910">
+          <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
           <folding>
             <element signature="n#getPostlikes#0;n#!!top" expanded="false" />
+            <element signature="e#207#474#0#PHP" expanded="false" />
             <element signature="n#query#0;n#!!top" expanded="false" />
+            <element signature="n#userLikedThisPost#0;n#!!top" expanded="false" />
             <element signature="n#imagePlaceholder#0;n#!!top" expanded="false" />
             <element signature="e#872#959#0#PHP" expanded="false" />
             <element signature="e#923#959#0#PHP" expanded="false" />
@@ -1245,7 +1195,6 @@
             <element signature="n#isLoggedIn#0;n#!!top" expanded="false" />
             <element signature="e#1229#1293#0#PHP" expanded="false" />
             <element signature="n#checkIfUserIsLoggedInAndRedirect#0;n#!!top" expanded="false" />
-            <element signature="e#1389#1451#0#PHP" expanded="false" />
             <element signature="n#escape#0;n#!!top" expanded="false" />
             <element signature="n#set_message#0;n#!!top" expanded="false" />
             <element signature="e#1593#1662#0#PHP" expanded="false" />
@@ -1288,48 +1237,36 @@
             <element signature="n#recordCount#0;n#!!top" expanded="false" />
             <element signature="n#checkStatus#0;n#!!top" expanded="false" />
             <element signature="n#checkUserRole#0;n#!!top" expanded="false" />
-            <marker date="1532977489074" expanded="true" signature="252:318" ph="SELECT * FRO... users" />
-            <marker date="1532977489074" expanded="true" signature="653:724" ph="SELECT * FRO... likes" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <marker date="1532967844068" expanded="true" signature="846:865" ph="SELECT * FRO... posts" />
+            <marker date="1532967844068" expanded="true" signature="942:993" ph="SELECT * FRO... posts" />
+            <marker date="1532967844068" expanded="true" signature="1337:1394" ph="SELECT * FRO... posts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1352">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/navigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-219">
-          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state relative-caret-position="628">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
-            <marker date="1532762983627" expanded="true" signature="1066:1090" ph="SELECT * FRO... categories" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="161" column="31" lean-forward="false" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="31" />
-          <folding>
-            <marker date="1532980358350" expanded="true" signature="344:378" ph="SELECT * FRO... posts" />
-            <marker date="1532980358350" expanded="true" signature="579:625" ph="UPDATE posts... " />
-            <marker date="1532980358350" expanded="true" signature="696:758" ph="INSERT INTO likes... " />
-            <marker date="1532980358350" expanded="true" signature="934:968" ph="SELECT * FRO... posts" />
-            <marker date="1532980358350" expanded="true" signature="1148:1201" ph="DELETE FROM likes... " />
-            <marker date="1532980358350" expanded="true" signature="1286:1332" ph="UPDATE posts... " />
-            <marker date="1532980358350" expanded="true" signature="1676:1750" ph="UPDATE posts... " />
-            <marker date="1532980358350" expanded="true" signature="2265:2359" ph="SELECT post_... posts" />
-            <marker date="1532980358350" expanded="true" signature="2442:2556" ph="SELECT post_... posts" />
-            <marker date="1532980358350" expanded="true" signature="6257:6372" ph="INSERT INTO comments... " />
-            <marker date="1532980358350" expanded="true" signature="8047:8094" ph="SELECT * FRO... comments" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
-          <folding>
-            <marker date="1532980831598" expanded="true" signature="2709:2733" ph="SELECT * FRO... categories" />
+            <marker date="1532982158641" expanded="true" signature="1066:1090" ph="SELECT * FRO... categories" />
           </folding>
         </state>
       </provider>

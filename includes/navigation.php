@@ -81,11 +81,11 @@
 
 
                     <li class="<?php echo $registration_class;?>">
-                        <a href="/CMSHeroku/registration">Registration</a>
+                        <a href="/registration">Registration</a>
                     </li>
 
                     <li>
-                        <a href="/CMSHeroku/contact">Contact</a>
+                        <a href="/contact">Contact</a>
                     </li>
 
 
