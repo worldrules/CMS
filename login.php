@@ -5,7 +5,7 @@
 <?php
 
 
-checkIfUserIsLoggedInAndRedirect('cmsheroku/admin');
+checkIfUserIsLoggedInAndRedirect('/admin');
 
 if(ifItIsMethod('post')) {
 
@@ -20,7 +20,7 @@ if(ifItIsMethod('post')) {
     } else {
 
 
-        redirect('cmsheroku/login.php');
+        redirect('/login.php');
 
     }
 

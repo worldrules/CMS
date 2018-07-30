@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4c146f7-9b9d-4849-9248-053206b23b0d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/post.php" afterPath="$PROJECT_DIR$/post.php" />
+      <change beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="624">
@@ -80,6 +80,16 @@
                 <marker date="1532982711382" expanded="true" signature="6243:6358" ph="INSERT INTO comments... " />
                 <marker date="1532982711382" expanded="true" signature="8033:8080" ph="SELECT * FRO... comments" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1378">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -201,7 +211,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/registration.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/admin/includes/adm_navigation.php" />
         <option value="$PROJECT_DIR$/admin/users.php" />
         <option value="$PROJECT_DIR$/admin/includes/view_all_comments.php" />
@@ -213,6 +222,7 @@
         <option value="$PROJECT_DIR$/admin/functions.php" />
         <option value="$PROJECT_DIR$/includes/header.php" />
         <option value="$PROJECT_DIR$/post.php" />
+        <option value="$PROJECT_DIR$/login.php" />
       </list>
     </option>
   </component>
@@ -301,7 +311,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Database Driver&#10;DDL Data Source" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="MySQL" />
-    <property name="SearchEverywhereHistoryKey" value="post&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/post.php&#10;he&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/header.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/adm_footer.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;login&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/login.php&#10;sideb&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;navi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;nav&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;INDEX&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;fun&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;comments&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/comments.php&#10;funct&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;sidebar&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;f&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;adm&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/adm_navigation.php&#10;na&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;footer&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;GITIG&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/vendor/psr/log/.gitignore&#10;vie&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/view_all_posts.php&#10;nav i&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registra&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;searc&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/search.php&#10;naviga&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registrat&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;side&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;sid&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;db&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/db.php&#10;logo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/logout.php&#10;contac&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/contact.php&#10;foo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;functi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/header.php&#10;catego&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/category.php&#10;update&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/update_categories.php&#10;posts&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/posts.php&#10;view&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/view_all_posts.php&#10;registrati&#9;FILE&#9;file://C:/xampp/htdocs/CMS/registration.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/add_user.php&#10;users&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/users.php&#10;func&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/functions.php&#10;inde&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/index.php&#10;edit&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/edit_post.php&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/CMS/search.php&#10;post\&#9;FILE&#9;file://C:/xampp/htdocs/CMS/post.php&#10;scrip&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/js/scripts.js&#10;autho&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;aut&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;author&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;comment&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/comments.php" />
+    <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/login.php&#10;post&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/post.php&#10;he&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/header.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/adm_footer.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;sideb&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;navi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;nav&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;INDEX&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;fun&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;comments&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/comments.php&#10;funct&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;sidebar&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;f&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;adm&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/adm_navigation.php&#10;na&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/index.php&#10;footer&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;GITIG&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/vendor/psr/log/.gitignore&#10;vie&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/includes/view_all_posts.php&#10;nav i&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registra&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;searc&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/search.php&#10;naviga&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/navigation.php&#10;registrat&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/registration.php&#10;side&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;sid&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/sidebar.php&#10;db&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/db.php&#10;logo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/logout.php&#10;contac&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/contact.php&#10;foo&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/footer.php&#10;functi&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/admin/functions.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/includes/header.php&#10;catego&#9;FILE&#9;file://C:/xampp/htdocs/CMSHeroku/category.php&#10;update&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/update_categories.php&#10;posts&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/posts.php&#10;view&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/view_all_posts.php&#10;registrati&#9;FILE&#9;file://C:/xampp/htdocs/CMS/registration.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/add_user.php&#10;users&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/users.php&#10;func&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/functions.php&#10;inde&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/index.php&#10;edit&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/includes/edit_post.php&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/CMS/search.php&#10;post\&#9;FILE&#9;file://C:/xampp/htdocs/CMS/post.php&#10;scrip&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/js/scripts.js&#10;autho&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;aut&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;author&#9;FILE&#9;file://C:/xampp/htdocs/CMS/author_post.php&#10;comment&#9;FILE&#9;file://C:/xampp/htdocs/CMS/admin/comments.php" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="PHP&#10;OracleSqlPlus" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -445,7 +455,7 @@
       <workItem from="1532808856491" duration="735000" />
       <workItem from="1532876597716" duration="18778000" />
       <workItem from="1532964602938" duration="6130000" />
-      <workItem from="1532970989264" duration="5866000" />
+      <workItem from="1532970989264" duration="5958000" />
     </task>
     <task id="LOCAL-00001" summary="Testando ferramenta">
       <created>1524007106895</created>
@@ -699,11 +709,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532982631722</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Projeto Concluído ! &lt;3">
+      <created>1532982720678</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1532982720678</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="406131000" />
+    <option name="totallyTimeSpent" value="406223000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1141,14 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1352">
@@ -1283,6 +1292,14 @@
             <marker date="1532982711382" expanded="true" signature="6243:6358" ph="INSERT INTO comments... " />
             <marker date="1532982711382" expanded="true" signature="8033:8080" ph="SELECT * FRO... comments" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1378">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
