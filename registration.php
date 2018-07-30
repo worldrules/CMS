@@ -153,7 +153,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             <div class="col-xs-6 col-xs-offset-3">
                 <div class="form-wrap">
                 <h1>Register</h1>
-                    <form role="form" action="registration.php" method="post" id="login-form" autocomplete="off">
+                    <form role="form" action="registration" method="post" id="login-form" autocomplete="off">
 
 
                         <div class="form-group">
