@@ -1,6 +1,14 @@
 <?php
 
 
+function getPostlikes($post_id){
+
+    $result = query("SELECT * FROM likes WHERE post_id=$post_id");
+    testQuery($result);
+    echo mysqli_num_rows($result);
+
+}
+
 
 function loggedInUserId() {
 
@@ -25,10 +33,10 @@ function query($query) {
 
 }
 
-function userLikedThisPost($the_post_id = ''){
+function userLikedThisPost($post_id){
 
 
-    $result = query("SELECT * FROM likes WHERE user_id=" . loggedInUserId() . " AND post_id={$the_post_id}");
+    $result = query("SELECT * FROM likes WHERE user_id=" . loggedInUserId() . " AND post_id={$post_id}");
     testQuery($result);
     return mysqli_num_rows($result) >= 1 ? true : false;
 
