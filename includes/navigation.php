@@ -32,7 +32,7 @@
         $cat_id = $row['cat_id'];
 
         $category_class = '';
-        $registration_class = 'active';
+        $registration_class = '';
 
         $pageName = basename($_SERVER['PHP_SELF']);
 
@@ -80,7 +80,7 @@
 
 
 
-                    <li>">
+                    <li class="<?php echo $registration_class;?>">
                         <a href="/registration">Registration</a>
                     </li>
 
