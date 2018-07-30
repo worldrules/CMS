@@ -80,7 +80,7 @@
 
 
 
-                    <li class="<?php echo $registration_class;?>">
+                    <li>">
                         <a href="/registration">Registration</a>
                     </li>
 
