@@ -161,14 +161,14 @@ if(isset($_POST['unliked'])) {
 
                     <!-- First Blog Post -->
                     <h2>
-                        <a href="/cmsheroku/"<?php echo $the_post_id ?>"><?php echo $post_title ?></a>
+                        <a href="/"<?php echo $the_post_id ?>"><?php echo $post_title ?></a>
                     </h2>
                     <p class="lead">
                         by <a href="index.php"><?php echo $post_user ?></a>
                     </p>
                     <p><span class="glyphicon glyphicon-time"></span> <?php echo $post_date ?></p>
                     <hr>
-                    <img class="img-responsive" src="/cms/images/<?php echo $post_image;?>" alt="">
+                    <img class="img-responsive" src="/images/<?php echo $post_image;?>" alt="">
                     <hr>
                     <p><?php echo $post_content ?></p>
 
