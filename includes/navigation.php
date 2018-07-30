@@ -36,7 +36,7 @@
 
         $pageName = basename($_SERVER['PHP_SELF']);
 
-        $registration = 'registration.php';
+        $registration = 'registration';
 
         if(isset($_GET['category']) && $_GET['category'] == $cat_id) {
 
