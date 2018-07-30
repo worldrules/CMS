@@ -19,7 +19,7 @@ require_once 'vendor/autoload.php';
 
 
 
-            redirect('/cmsheroku/index');
+            redirect('/index');
 
 
 
@@ -78,7 +78,7 @@ require_once 'vendor/autoload.php';
 
                         $mail->Body = '<p>Please click to reset your password
 
- <a href="http://localhost:80/cmsheroku/reset.php?email='.$email.'&token='.$token.' ">http://localhost:80/cmsheroku/reset.php?email='.$email.'&token='.$token.'</a></p>';
+ <a href="https://cmstotvs.herokuapp.com/reset.php?email='.$email.'&token='.$token.' ">https://cmstotvs.herokuapp.com/reset.php?email='.$email.'&token='.$token.'</a></p>';
 
 
                         if($mail->send()){

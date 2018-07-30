@@ -9,10 +9,10 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="/CMSHeroku/js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/CMSHeroku/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 </body>
 

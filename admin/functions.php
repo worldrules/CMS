@@ -470,7 +470,7 @@ function login_user($username, $password)
 
 
 
-         redirect("/cmsheroku/admin");
+         redirect("/admin");
 
 
          } else {

@@ -103,14 +103,14 @@
             <h1 class="page-header">
                 <?php  ?>
                 <h2>
-                    <a href="/cmsheroku/post/<?php echo $post_id ?>"><?php echo $post_title ?></a>
+                    <a href="/post/<?php echo $post_id ?>"><?php echo $post_title ?></a>
                 </h2>
                 <p class="lead">
-                    by <a href="/cmsheroku/index"><?php echo $post_user ?></a>
+                    by <a href="/index"><?php echo $post_user ?></a>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date ?></p>
                 <hr>
-                <img class="img-responsive" src="/cmsheroku/images/<?php echo $post_image; ?> " alt="">
+                <img class="img-responsive" src="/images/<?php echo $post_image; ?> " alt="">
 
                 <hr>
                 <p><?php echo $post_content?></p>

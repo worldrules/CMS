@@ -70,7 +70,7 @@ if ($stmt = mysqli_prepare($con, 'SELECT username, user_email, token FROM users 
 
                 if(mysqli_stmt_affected_rows($stmt) >= 1){
 
-                    redirect('/cmsheroku/login.php');
+                    redirect('/login.php');
 
 
                 }

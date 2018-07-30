@@ -211,7 +211,7 @@ if(isset($_POST['unliked'])) {
                     <?php  } else { ?>
 
                         <div class="row">
-                            <p class="pull-right login-to-post">You need to <a href="/cmsheroku/login.php">Login</a> to like </p>
+                            <p class="pull-right login-to-post">You need to <a href="/login.php">Login</a> to like </p>
                         </div>
 
 
@@ -398,7 +398,7 @@ if(isset($_POST['unliked'])) {
 
             $('.like').click(function(){
                 $.ajax({
-                    url: "/cmsheroku/post.php?p_id=<?php echo $the_post_id; ?>",
+                    url: "/post.php?p_id=<?php echo $the_post_id; ?>",
                     type: 'post',
                     data: {
                         'liked': 1,
@@ -414,7 +414,7 @@ if(isset($_POST['unliked'])) {
 
                 $.ajax({
 
-                    url: "/cmsheroku/post.php?p_id=<?php echo $the_post_id; ?>",
+                    url: "/post.php?p_id=<?php echo $the_post_id; ?>",
                     type: 'post',
                     data: {
                         'unliked': 1,
