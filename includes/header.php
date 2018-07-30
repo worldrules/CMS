@@ -13,7 +13,7 @@ session_start();
     <meta name="author" content="">
 
     <title>CMS</title>
-K
+
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 

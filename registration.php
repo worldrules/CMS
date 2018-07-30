@@ -24,9 +24,6 @@ $pusher = new \Pusher\Pusher(getenv('APP_KEY'), getenv('APP_SECRET'),getenv('APP
 
 
 
-echo "teste";
-
-
 
 
 
